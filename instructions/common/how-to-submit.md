@@ -2,9 +2,9 @@
 
 # How to: Submit an Assignment
 
-## Step 1: In your class curriculum dashboard, click the green Submit Assignment at the top of the page for the current lesson.  You can also get to the submission form using this link: http://tiny.cc/ctd-borr-assignment
+## Step 1: In your class curriculum dashboard, click the link to "Submit Assignment".  You can also get to the submission form using this link: http://tiny.cc/ctd-borr-assignment
 
-
+**Preview screenshot coming soon**
 
 ## Step 2: Complete the form; be sure to paste the URL you copied in the previous tutorial
 **NOTE:** In this screenshot, where the URL has "YOURNAMEHERE" should be _your_ GitHub username. 
