@@ -2,7 +2,7 @@
 
 # How to: Submit an Assignment
 
-## Step 1: In your class curriculum dashboard, click the link to "Submit Assignment".  You can also get to the submission form using this link: http://tiny.cc/ctd-borr-assignment
+## Step 1: In your class curriculum dashboard, click the link to "Submit Assignment".  You can also get to the submission form using this link: [http://tiny.cc/ctd-borr-assignment](https://airtable.com/shrSiBzWPqo1xUBv4)
 
      **Preview screenshot coming soon**
 
