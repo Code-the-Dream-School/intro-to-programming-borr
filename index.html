@@ -1,20 +1,219 @@
 Geeta Turumella
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Personal Portfolio" >
+  <meta name="author" content="Geeta Turumella">
+  <title>Geeta's Portfolio</title>
+  <style>
+  * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+  } 
 
-About
-My name is Geeta Turumella.   
-I have been out of work for the past 12 years as I was taking care of home and my son.  I have been doing some volunteering work in my son’s school as well as 
-chaperoning the field trips before pandemic. I am actively managing home, looking after my son as well as self teaching myself on current trends in web developer job market.
-I am confident in my ability to successfully succeed in any task that I take up.
+  body {
+   background: rgb(36,0,21);
+   background: linear-gradient(90deg, rgba(36,0,21,0.929942838951987) 0%, rgba(0,233,255,1) 100%);
+   width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+	font-family:san-serif;
+	color:white;
+    }
+   
+    .navbar {
+    width: 100%;
+	padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+	color: #fff;
+	}
 
-Project
+	.nav-links a {
+	text-decoration:none;
+	color: #fff;
+	}
 
-Experience
-1.  I have been out of work for the past 12 years as I was taking care of home and my son.  I have been doing some volunteering work in my son’s school as well
-    as chaperoning the field trips before pandemic. I am actively managing home, looking after my son as well as self teaching myself on current
-    trends in web developer job market.  2010-2022
-2.  Certified in Going Places Network, a Dress for success program for unemployed and under employed women from Waketech Community College  September-October 2021
-3.  Worked as a junior level developer, Broadgate Inc, Troy, MI  2009-2010
+	.link-group {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+    }
 
-Connect
+    .link-li {
+	list-style:none;
+     }
 
-Email: gtturumella@gmail.com                      GitHub:https://github.com/Tugeeta                           Linkedin: https://www.linkedin.com/in/geeta-devi-404679238                   
+     a {
+   text-decoration: none;
+    }
+
+   .logo {
+     font-size: 15px;
+   }
+
+  .menu{
+  display:flex;
+  gap: 1em;
+  font-size: 18px;
+  }
+
+  .menu li:hover{
+  display:inline-block;
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  }
+
+  menu li {
+  padding: 5px 14px;
+  }
+  
+  <!--Checkbox-->
+  input [type=checkbox]:checked ~ .menu { 
+  display:block;
+  }
+
+  <!--Hamburger Menu-->
+  .hamburger{
+  display: block;
+  font-size: 24px;
+  user-select: none;
+   }
+
+  <!-- APPLYING MEDIA QUERIES-->
+  @media (max-width: 768px) {
+  .menu {
+  display:none;
+  position:absolute;
+  background-color:teal;
+  right:0;
+  left:0;
+  text-align:center;
+  padding: 16px 0px;
+    }
+      }
+  
+      .menu li + li {
+     margin-top: 12px;
+     }
+
+  .about-section {
+   padding: 50px;
+   text-align: center; 
+   color: white;
+    }
+     
+    <!--ABOUT-->
+   .about-section {
+    width: 100%;
+    height: 50vh;
+    padding:  0 150px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    opacity: 0;
+    transition: 1s;
+    }
+
+   .hero-heading{
+    color: #fff;
+    font-size: 70px;
+    text-transform: capitalize;
+    font-weight: 60px;
+	top:70px;
+	text-shadow:2px 1px yellow;			
+     }
+
+    .about-img{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    height: 120vh;
+    width: 30%;
+    object-fit: cover;
+    opacity: 0.2;
+     }
+   .about-info{
+    color: #fff;
+    opacity: 0.6;S
+    font-size: 20px;
+    line-height: 40px;
+       } 
+   .h1-section{
+      text-decoration:underline;
+       text-shadow:2px 1px yellow;
+     } 
+  </style>
+  </head>
+  <body>
+  <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo"><img src ="GDlogo.jpg" alt="Geeta Turumella" width=25px></div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+  <li class="link-li"><a href="#About">About</a></li>
+  <li class="link-li"><a href="#Project">Project</a></li>
+  <li class="link-li"><a href="#Experience">Experience</a></li>
+  <li class="link-li"><a href="#Connect">Connect</a></li>
+  </div>
+  </ul>
+  </nav>
+
+  <!-- ABOUT SECTION-->	
+          <section class="about-section active">
+          <h2 class="hero-heading"><marquee style="direction:right">hello! i am<br> geeta</marquee></h2>
+		  <img src="geeta.png" class="about-img" alt=" ">
+	      <div class="about-info" id="about">
+		  		  <p>Thanks for checking out my profile! I am re-enteering the workforce after 12 years. I have a Master's degree, Diploma in Advanced Computer Technology and Web Designing. 
+				  I am a person with versatile skillset, integrity and willingness to learn new skills. I am curious, driven, and always looking to improve my abilities. I am looking for entry level web development or returnship jobs.  I am confident in my ability to successfully succeed in any task that I take up. </p>
+        </div>
+	             </section>
+   
+  
+		<!--Experience section-->
+        <section> 
+		  <div>
+                   <h1 class="h1-section">Experience</h1>
+           <ul>
+        <li>2021:<br>
+         <p>Certified in Going Places Network, a <strong>Dress for success program</strong> for unemployed and under employed women from <strong>Waketech Community College</p>
+            </li><br> <br>
+			
+            <li>2010-2022: 
+            <p>I have been out of work for the past 12 years as I was taking care of home and my son.  I have been doing some volunteering work in my son’s school as well as chaperoning the field trips before pandemic.  I am actively managing home, looking after my son as well as self teaching myself on current trends in web developer job market.</p><br><br>
+        </li>
+    
+            <li>
+            <p> 2009-2010: <br> Worked as a junior level developer, Broadgate Inc, Troy, MI</p>
+        </li>
+          </ul>
+        </div>
+ </section>
+ &nbsp &nbsp
+ <section>
+ <h1 class="h1-section">Connect</hi>
+  <h3> Email: gtturumella@gmail.com &nbsp GitHub
+  <a href="https://github.com/Tugeeta"><img src="github.jpg" width="15"> &nbsp &nbsp Linkedin</a>
+  <a href="https://www.linkedin.com/in/geeta-devi-404679238/"><img src="linkedin.jpg" width="15"></a>
+ </h3>
+ </section>
+  </body>
+</html>
