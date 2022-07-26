@@ -1,0 +1,45 @@
+.typeWrapper {
+  display: grid;
+  place-items: center;
+}
+
+.typewriter {
+  text-align: center; 
+  font-family: 'Source Code Pro', monospace; 
+  /* font-family: 'Anonymous Pro', monospace;   */
+  font-size: 50px; 
+  color:gray;
+    
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  width: 40%;
+ }
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+h1 {
+  /* font-family: 'Source Code Pro', monospace; */
+  /* font-family: 'Anonymous Pro', monospace;   */
+  font-family: 'Source Code Pro', monospace; 
+  font-size: 75px;
+  text-align: center;
+  margin-bottom: -40px;  
+  /* remove spacing bottom of H1 */ 
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-size: 25px;
+} 
