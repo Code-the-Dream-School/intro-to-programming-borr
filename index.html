@@ -30,7 +30,7 @@ Geeta Turumella
    
     .navbar {
     width: 100%;
-	padding: 20px;
+	padding: 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -155,13 +155,31 @@ Geeta Turumella
    .h1-section{
       text-decoration:underline;
        text-shadow:2px 1px yellow;
+       padding: 15px;
      } 
+     ol li{
+ list-style:none;
+ }
+#skillSec li{
+display:inline-block;
+width:200px;
+height:100px;
+border:2px solid yellow;
+vertical-align:top;
+text-align:center;
+margin:6px;
+border-radius: 20px;
+background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(248,252,70,0.4939017843465511) 100%);
+}     
+
+         
   </style>
   </head>
   <body>
   <nav class="navbar">
      <!-- LOGO -->
-     <div class="logo"><img src ="GDlogo.jpg" alt="Geeta Turumella" width=35px></div>
+     <div class="logo"><img src ="GDlogo.png" alt="Geeta Turumella" width=35px></div>
      <!-- NAVIGATION MENU -->
      <ul class="nav-links">
        <!-- USING CHECKBOX -->
@@ -179,7 +197,7 @@ Geeta Turumella
 
   <!-- ABOUT SECTION-->	
           <section class="about-section active">
-          <h2 class="hero-heading"><marquee style="direction:right">hello! i am<br> geeta</marquee></h2>
+          <h2 class="hero-heading">hello! i am<br> geeta</h2>
 		  <img src="geeta.png" class="about-img" alt=" ">
 	      <div class="about-info" id="about">
 		  		  <p>Thanks for checking out my profile! I am re-enteering the workforce after 12 years. I have a Master's degree, Diploma in Advanced Computer Technology and Web Designing. 
@@ -207,13 +225,24 @@ Geeta Turumella
           </ul>
         </div>
  </section>
- &nbsp &nbsp
+      <section id= "skillSec">
+     <div>
+    <h1 class ="h1-section"> Skills</h1>
+      <ol>
+        <!--Used <ol> tag instead of <ul> because list elements are sticking to navigation bar during DOM loading as navbar also have list element -->
+       </ol>
+     </div>
+  </section>
  <section>
  <h1 class="h1-section">Connect</hi>
-  <h3> Email: gtturumella@gmail.com &nbsp GitHub
-  <a href="https://github.com/Tugeeta"><img src="github.jpg" width="15"> &nbsp &nbsp Linkedin</a>
+  <h3> Email: gtturumella@gmail.com &nbsp; GitHub
+  <a href="https://github.com/Tugeeta"><img src="github.jpg" width="15"> &nbsp; &nbsp; Linkedin</a>
   <a href="https://www.linkedin.com/in/geeta-devi-404679238/"><img src="linkedin.jpg" width="15"></a>
  </h3>
+ <footer>
+  <p id="copyright"></p>
+  </footer>      
+  <script src="js/index.js"></script>
  </section>
   </body>
 </html>
