@@ -13,3 +13,8 @@ for (let num in skills) {
   newListItem.innerText = skills[num];
   skillsSection.appendChild(newListItem);
 }
+const messageForm = document.querySelector('leave_message');
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', function (name) {
+  console.log(name.target);
+};
