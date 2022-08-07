@@ -8,11 +8,11 @@
 
 <body>
   <h1>Pramote Suewirojanakul</h1>
-  <div id="container">
+  <section id="container">
   <h1>About</h1>
   <p>I have more than 10++ years experience as a risk manager and financial analyst.</p>
-  </div>
-  <div>
+  </section>
+  <section>
   <h1>Experience</h1>
   <ul>
     <li>Siam Commercial Bank Securities Co., Ltd</li>
@@ -20,19 +20,55 @@
     <li>Government Pension Fund</li>
     <li>CIMB Thai Bank PLC.</li>
   </ul>
-  </div>
-  <div>
+  </section>
+  <section>
   <h1>Connect</h1>
   <p>pramote.suewiroj@gmail.com</p>
   <p>https://github.com/pramotesuewiroj</p>
-  </div>
-  <div id="skills">
-  <h2>Skills</h2>
+  </section>
+  <section id="skills">
+    <h2>
+      Skills
+    </h2>
   <ul>
   </ul>
-  </div>
-<footer>
-</footer>
-<script src="js/index.js"></script>
+  </section>
+  <section>
+    <h2>
+      Leave a Message
+    </h2>
+    <form name="leave_message" id="leave_message" method="post">
+      <div>
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="name" id="name" required>
+      </div>
+      
+    
+      <div>
+        <label for="email">Email Address</label>
+        <br>
+        <input type="email" name="email" id="email" required>
+      </div>
+    
+      <div>
+        <label for="message">Message</label>
+        <br>
+        <textarea name="message" id="message"></textarea required>
+      </div>
+    
+      <button id="btn" type="submit">Submit</button>
+    </form>
+  </section>
+  <section id="messages">
+    <h2>
+      Messages
+    </h2>
+    <ul id="ul_id">
+    </ul>
+  </section>
+  <footer>
+  </footer>
+  <script src="js/index.js"></script>
 </body>
 </html>
