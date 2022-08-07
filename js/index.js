@@ -70,14 +70,14 @@ messageForm.addEventListener("submit", function(e) {
   // add newMessage to messageList
   messageList.appendChild(newMessage);
 
-    // click remove Button to delete each newMessage
-    removeButton.addEventListener('click', function (){
-      // button's parent element
-      const entry = removeButton.parentNode;
-      // console.log(`removeButton previousSibling:` + removeButton.previousSibling);
-      // console.log(`removeButton getparentNode:` + removeButton.parentNode);
-      entry.remove();
-    })  
+  // click remove Button to delete each newMessage
+  removeButton.addEventListener('click', function (){
+    // button's parent element
+    const entry = removeButton.parentNode;
+    // console.log(`removeButton previousSibling:` + removeButton.previousSibling);
+    // console.log(`removeButton getparentNode:` + removeButton.parentNode);
+    entry.remove();
+  })  
   
   // add edit button
   const editButton = document.createElement('button');
