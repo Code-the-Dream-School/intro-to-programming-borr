@@ -18,7 +18,7 @@ skills.forEach((skill) => {
 })
 
 
-
+/*
 document.querySelector('#submit').addEventListener('click', run)
 
 function run() {
@@ -34,7 +34,7 @@ function run() {
 
 
 //lesson 4.3
-/*
+
 const messageForm = document.getElementsByName('leave_message')[0]
 
 messageForm.addEventListener("submit", (e) => {
