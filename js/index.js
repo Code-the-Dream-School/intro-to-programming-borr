@@ -62,9 +62,11 @@ messageForm.addEventListener("submit", function(e) {
 
   const messageSection = document.querySelector('#messages');
   const messageList = messageSection.querySelector('ul');
+  const meessageHeader = document.querySelector('#messages-header');
+  console.log(meessageHeader);
 
   // hide messages by default
-  messageSection.style.display = 'none';
+  meessageHeader.style.display = 'none';
  
   // show emailto link using name, and show the message
   const newMessage = document.createElement('li');
@@ -82,7 +84,7 @@ messageForm.addEventListener("submit", function(e) {
 
   // add newMessage to messageList
   messageList.appendChild(newMessage);
-  document.getElementById("messages-header").classList.remove("hide");
+  // document.getElementById("messages-header").classList.remove("hide");  works
 
   // click remove Button to delete each newMessage
   removeButton.addEventListener('click', function (){
@@ -94,7 +96,9 @@ messageForm.addEventListener("submit", function(e) {
 
     // if it's the last message, hide "Messages h2"
     if(messageList.hasChildNodes() === false) {
-      document.getElementById("messages-header").classList.add("hide");
+      // document.getElementById("messages-header").classList.add("hide"); works
+      meessageHeader.style.display = 'none';
+      
     };
   })  
   
@@ -114,16 +118,19 @@ messageForm.addEventListener("submit", function(e) {
       messageForm.message.value = messageValue;      
     });
 
-  console.log(messageSection);  
-  console.log(newMessage);
-  console.log(removeButton);
 
-  // check if messageSection is empty, hidden by default in index.html below doesn't work
-  messageSection.style.display =  messageList.hasChildNodes() ? "block": "none";
+  // console.log(newMessage);
+  // console.log(removeButton);
+
+  // check if messageSection is empty, hidden by default in index.html below 
+  // messageSection.style.display =  messageList.hasChildNodes() ? "block": "none"; doesn't work because I chose the parent element instead of the H2 element
   
+  meessageHeader.style.display =  messageList.hasChildNodes() ? "block": "none";
+  console.log(meessageHeader);  
+
   messageForm.reset();
 
 });
 
 
-// <a href="mailto:johndoe@fakeemail.com">Example mailto link</a>
+

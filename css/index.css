@@ -1,53 +1,36 @@
-
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  
 }
 
 body {
-  
   background-color: lightgrey;
   color: black;
-  
 }
-
 a {
   text-decoration: none;
 }
 
-
 nav ul li {
   list-style: none;
   display: inline;
-  /* margin-left: 1rem; */
 }
 
 .menu-list {
-  text-align: right;
-  margin-left: .25rem;
+  float: right;
+  margin-left: 0.25rem;
 
-  /* margin-right: .25rem; */
-  padding: .40rem;
+  padding: 0.4rem;
   max-width: fit-content;
   background-color: lightsalmon;
   background-color: rgb(165, 197, 255);
   background-color: #f9ebd6;
-  
 }
-
-/* .classheader {
-  margin-left: 0px;
-} */
-
 #idheader {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 4rem;
   font-weight: 800;
-  color: white;  
-  margin-right: 10rem;
-  margin-left: -2rem;
-  
+  color: white;
 }
 
 #idheader:hover {
@@ -56,84 +39,83 @@ nav ul li {
 
 #idheader:hover::after {
   content: attr(h1-hover-after);
-
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 4rem;
   font-weight: 800;
   color: grey;
   color: salmon;
-    
 }
 
-
 h2 {
-  color:gray;
+  color: gray;
 }
 
 .experience li {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   list-style: none;
-} 
-
+  margin-top: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
 .job-title {
   /* margin-bottom: .5rem; */
-  margin-right: .25rem;
-  padding: .40rem;
+  margin-right: 0.25rem;
+  padding: 0.4rem;
   max-width: fit-content;
   background-color: lightsalmon;
   background-color: rgb(165, 197, 255);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .company-name {
   /* margin-bottom: .25rem; */
-  padding: .40rem;
+  padding: 0.4rem;
   max-width: fit-content;
   background-color: white;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+}
+
+#skills ul {
+  display: flex;
+  gap: 0.5rem;
 }
 
 #skills li {
   list-style: none;
-  margin-bottom: .25rem;
-  padding: .40rem;
-  max-width: fit-content; 
+  margin-bottom: 0.25rem;
+  padding: 0.4rem;
+  max-width: fit-content;
   background-color: white;
-  border-radius: .5rem;
-
+  border-radius: 0.5rem;
 }
-
 
 form {
   /* background-image: URL("../images/envelope1.png");   */
   background-repeat: no-repeat;
   background-size: 20%;
-  
-  
 }
 
 .leave-message h2 {
-  color: black;  
+  color: black;
 }
 
 label {
   font-weight: 600;
   /* color: cornflowerblue; */
   color: black;
-  
 }
 
-input, textarea {
+input,
+textarea {
   width: 13rem;
   height: 1.5rem;
-  border-radius: .25rem;
-  border: .05rem dashed black; 
-  margin-bottom: .5rem; 
+  border-radius: 0.25rem;
+  border: 0.05rem dashed black;
+  margin-bottom: 0.5rem;
 }
 
 textarea {
   height: 3rem;
-  
 }
 
 button {
@@ -142,40 +124,89 @@ button {
   width: 13.3rem;
   font-size: 1rem;
   height: 1.5rem;
-  border-radius: .25rem;  
+  border-radius: 0.25rem;
 }
-
 #messages h2 {
   color: black;
 }
+
 #messages li {
   margin-bottom: 1rem;
   /* list-style: none; */
   /* list-style-type: kannada; */
   list-style-type: decimal-leading-zero;
-} 
-
-
+}
 #messages button {
   margin-left: 1rem;
-  max-width: fit-content; 
+  max-width: fit-content;
   background-color: brown;
   border: none;
 }
-
 footer {
   height: 2rem;
   background-color: #f9ebd6;
   display: flex;
-  
+
   /* X-axis */
   justify-content: center;
-  
+
   /* Y-axis */
-  align-items: center;   
-     
+  align-items: center;
 }
+
 
 .hide {
   display: none;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+}
+
+#idheader {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  margin-top: 10px;
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+#nav-list {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.nav-item {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9ebd6;
+  color: black;
+  margin: 5px;
+}
+
+.list-test {
+  display: flex; 
+  flex-wrap: wrap;
+  
+}
+
+.list-test li span {
+  display: flex;
+  text-wrap: wrap;
+  
+}
+
+@media only screen and (max-width: 942px) {
+  .nav-bar {
+    flex-wrap: wrap;
+  }
 }

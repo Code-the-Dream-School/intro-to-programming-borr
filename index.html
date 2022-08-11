@@ -8,6 +8,13 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap');
+
+    @media only screen and (max-wdith: 942px) {
+  body {
+    background-color: green;
+  }
+}
+
   </style>
   <title>James H. Nguyen's Portfolio</title>
 </head>
@@ -15,17 +22,18 @@
 <body>
   <!-- <section class = "header" h1-hover-after="Front End Developer"> -->
     <!-- James H. Nguyen -->
-    <nav>
-      <ul>
-        <li class = "classheader" id = "idheader" h1-hover-after="Front End Developer"> James H. Nguyen</li>
-        <li class = "menu-list"><a href = "#skills-h2">Skills</a></li>
-        <li class = "menu-list"><a href = "#exprience">Experience</a></li>
-        <li class = "menu-list"><a href = "#contact">Contact</a></li>
-        <li class = "menu-list"><a href = "#about">About</a></li>  
-      </ul>
-    </nav>
-  <!-- </section> -->
-
+    <div class = "nav-bar">
+      <div class="w-100">  
+          <span class = "classheader" id = "idheader" h1-hover-after="Front End Developer"> James H. Nguyen</span>
+      </div>
+      <nav>    
+        <a class="nav-item" href = "#skills-h2">Skills</a>
+        <a class="nav-item" href = "#exprience">Experience</a>
+        <a class="nav-item" href = "#contact">Contact</a>
+        <a class="nav-item" href = "#about">About</a> 
+      </nav>
+    </div>
+  
   <section>
     <h2 id="about">About</h2>
       <p> I enjoy all things design-related, from graphic to industrial.  Recently I've also started learning digital marketing, completed a UX / UI course, and now am learning front end coding.</p>    
@@ -34,8 +42,14 @@
   <section class = "experience">
   <h2 id="experience">Experience</h2>
       <ul>
-        <li><span class = "job-title">Ecommerce Email Design, </span> <span class = "company-name">ShopFuel</span></li>
-        <li><span class = "job-title">Content Strategist, </span> <span class = "company-name">SketchWow</span></li>
+        <li>
+          <span class = "job-title">Ecommerce Email Design, </span> 
+          <span class = "company-name">ShopFuel</span>
+        </li>
+        <li>
+          <span class = "job-title">Content Strategist, </span> 
+          <span class = "company-name">SketchWow</span>
+        </li>
       </ul>
   </section>
   <section id = "skills">
@@ -73,7 +87,7 @@
     </form>
   </section>
   <section id="messages">
-    <h2 id="messages-header" class="hide";>Messages</h2>
+    <h2 id="messages-header" class="hide" style="display: none;">Messages</h2>
     <ul></ul>
   </section>
   <footer>
