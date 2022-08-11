@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-image: url('/profile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body{
+    background-color: rgb(81, 0, 81);
+    margin: 100px 20px;
+}
+
+/* nav section */
+.navContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    padding: 18px;
+    position: sticky;
+    top: 0px;
+}
+
+.navListContainer{
+    display: flex;
+    align-items: center;
+}
+
+.navName{
+    color: white;
+    text-transform: capitalize;
+}
+
+.navList{
+    margin-left: 20px;
+    list-style-type: none;
+    color: turquoise;
+    font-weight: 100;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navList:hover{
+    color: gray;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* about section */
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.profileImage{
+    height: 400px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+.aboutTitle{
+    color: turquoise;
+}
+
+.aboutTextContainer{
+    width: 500px;
+    text-align: justify;
+    color: white;
+}
+
+.myWork{
+    padding: 12px;
+    border-radius: 5%;
+    outline: none;
+    border: none;
+    background-color: turquoise;
+    font-weight: 900;
+    margin-top: 30px;
+}
+
+.myWork:hover{
+    color: rgb(106, 106, 106);
+}
+
+/* Page partition */
+.pagePartition{
+    background-image: url('./profile.jpg');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 40px 0px;
+}
+
+/* project section */
+#projects{
+    margin: 40px 0px;
+    height: 1300px;
+}
+
+.projectTitle{
+    display: grid;
+    place-items: center;
+    color: turquoise;
+    font-size: 30px;
+}
+
+.projectCardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+
+.projectCard{
+    margin: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.projectImg{
+    height: 300px;
+    width: 300px;
+    border-radius: 5%;
+}
+
+.projectName{
+    color: white;
+    margin-top: 17px;
+}
+
+
+.viewProjectBtn{
+    padding: 10px;
+    font-weight: 900;
+    background-color: turquoise;
+    color: black;
+    font-size: 11px;
+    outline: none;
+    border: none;
+    border-radius: 5%;
+}
+
+
+.viewProjectBtn:hover{
+    color: rgb(106, 106, 106);
+}
+
+
+/* footer */
+#footer{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 450px;
+}
+
+.footerName{
+    color: turquoise;
+}
+
+.contact{
+    color: white;
+}
+
+.footerContact{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.inputBox{
+    padding: 8px;
+    margin: 15px;
+    width: 300px;
+    border: 2px solid turquoise;
+    border-radius: 5%;
+}
+
+.btnSubmit{
+    padding: 10px;
+    margin-top: 15px;
+    font-weight: 900;
+    background-color: turquoise;
+    outline: none;
+    border: none;
+}
+
+.btnSubmit:hover{
+    color:rgb(106, 106, 106)
+}
+
+.formTitle{
+    color: white;
+}
+
+.footerForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 20px;
+    border-radius: 5%;
+    border: 2px solid white;
+    margin-bottom: 20px;
+}
+
+
+/* copyright */
+.copyrightContianer{
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+
+
+/* responsive breakpoint 1 */
+@media screen and (min-width: 700px){
+    /* about */
+    #about {
+    flex-direction: row;
+    margin-top: 100px;
+    }
+
+    .aboutTextContainer {
+    width: 600px;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+
+    /* projects */
+    #projects{
+        height: 500px;
+    }
+
+    .projectCardContainer {
+        flex-direction: row;
+    }
+
+    /* footer */
+    #footer{
+        flex-direction: row;
+    }
+
+    .footerForm{
+        height: 350px;
+    }
+}
