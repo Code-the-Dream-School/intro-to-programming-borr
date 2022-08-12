@@ -33,26 +33,26 @@ for (let i = 0; i < skills.length; i++) {
 /* message form handeling */
 const messageForm = document.getElementsByName("leave_message");
 
-messageForm[0].addEventListener("submit", (doc) => {
-  doc.preventDefault();
+messageForm[0].addEventListener("submit", (e) => {
+  e.preventDefault();
 
-  const name = doc.target.name.value;
-  const email = doc.target.email.value;
-  const message = doc.target.message.value;
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const message = e.target.message.value;
 
   console.log(name, email, message);
 
   /* Displaying message list */
-  const messageSection = document.getElementById("#messeges");
   const messageList = document.querySelector("#messageList");
-
   const newMessage = document.createElement("li");
+  newMessage.className = "newMessageText"; /* class name for css style */
 
   newMessage.innerHTML = `<a href="mailto: ${email}">${name}</a>
    <span>wrote: ${message} </span>`;
 
   /* button handeling */
   const removeButton = document.createElement("button");
+  removeButton.className = "removeMessageButton"; /* class name for css style */
   removeButton.innerText = "remove";
   removeButton.setAttribute("type", "button");
 

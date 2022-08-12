@@ -1,0 +1,88 @@
+body {
+  background-color: rgb(53, 87, 100);
+  color: rgb(255, 234, 17);
+  font-family: "monospace" sans-serif;
+  font-size: 18px;
+}
+
+/* changing color, font-weight, and size of headings */
+h1,
+h2 {
+  color: palegoldenrod;
+  font-weight: 800;
+  font-size: 28px;
+  margin: 30px;
+}
+
+/* Transformed "Experience" and "skils" list items into styled blocks */
+.box {
+  width: 650px;
+  background-color: rgb(90, 143, 123);
+
+  margin: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+#my-skills {
+  width: 235px;
+  color: rgb(150, 234, 240);
+  font-weight: 600;
+  background-color: rgb(90, 143, 123);
+
+  margin: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 30px 30px 30px 55px;
+}
+
+.social-links {
+  width: 100px;
+  color: rgb(255, 234, 17);
+  background-color: rgb(129, 202, 207);
+
+  margin: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 30px 30px 30px 55px;
+}
+
+form[name="leave_message"] {
+  width: 190px;
+  color: rgb(53, 87, 100);
+  background-color: rgb(129, 202, 207);
+  font-weight: 600;
+
+  margin: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.submit.button {
+  width: auto;
+  background-color: rgb(255, 234, 17);
+  font-weight: 600;
+  margin: 8px 0 0 0;
+}
+
+/* class names added in index.js file */
+.newMessageText {
+  color: white;
+}
+.removeMessageButton {
+  background-color: rgb(255, 234, 17);
+  font-weight: 600;
+}
+
+#footer {
+  font-size: 12px;
+  background-color: rgb(90, 143, 123);
+  width: 115px;
+
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 0 0 10px;
+}
