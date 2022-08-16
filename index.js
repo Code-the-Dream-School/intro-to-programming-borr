@@ -18,30 +18,54 @@ skills.forEach((skill) => {
 })
 
 
+/*
+document.querySelector('#submit').addEventListener('click', run)
+
+function run() {
+  const name = document.querySelector('#name').value
+  const email = document.querySelector('#email').value
+  const message = document.querySelector('#message').value
+
+  document.querySelector('#displayMessage').innerText = `
+  <span>
+  <a href="mailto:${email}">${name}</a>
+  wrote: ${message} 
+  </span>`
+
 
 //lesson 4.3
-const messageForm = document.getElementsByName('leave_message')
 
+const messageForm = document.getElementsByName('leave_message')[0]
 
 messageForm.addEventListener("submit", (e) => {
     
     e.preventDefault()
 
-    const {name, email, message } = e.target
+    let {name, email, message } = e.target
+
     addMessageToList({
-        name: name.value, 
-        email: email.value,
-        message: message.value
+      name: name.value, 
+      email: email.value,
+      message: message.value
 })
     
-
-    messageForm.reset()
+   messageForm.reset()
 })
 
+*/
+
+/*
     const messageList = document.getElementById("message-list")
 
-    const addMessageToList = ({ name, email, message }) => {
+    let addMessageToList = ({ name, email, message }) => {
        const newMessage = document.createElement("li") 
+
+
+       const id= addMessageToList()
+       messageIds[id] = newMessage
+
+
+
 
        newMessage.innerHTML = `
         <span>
@@ -53,7 +77,7 @@ messageForm.addEventListener("submit", (e) => {
         const removeButton= document.getElementById("removeButton")
 
         messageList.appendChild(newMessage)
-        document.getElementById("messages").classList.remove("hideSection")
+        document.getElementById("messages-section").classList.remove("hideSection")
     }
    // Add an event listener to the removeButton element that handles the "click" event
    // Inside the callback function, find the button's parent element using DOM Traversal (hint: parentNode property) and store it in a variable named entry
@@ -62,6 +86,9 @@ messageForm.addEventListener("submit", (e) => {
   //  hint: appendChild method
   //   Append the newMessage to the messageList element
 
+
+  */
+ 
 
     
 
