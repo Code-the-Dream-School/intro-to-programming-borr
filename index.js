@@ -96,14 +96,10 @@ messageForm.addEventListener("submit", (e) => {
 
     
 
-<<<<<<< HEAD
-    
-    
-=======
+
     const hamburger = document.getElementsById('hamburger')
     const navUL = document.getElementsByClassName('nav-ul')
 
     hamburger.addEventListener('click', () => {
         navUL.classList.toggle('show');
     })
->>>>>>> 8b136a8 (created nav and updated experiance and leave a message using flexbox)

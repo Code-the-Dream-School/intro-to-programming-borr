@@ -8,8 +8,6 @@ body{
     color: seashell;
 }
 
-<<<<<<< HEAD
-=======
 nav {
     display: flex;
     align-items: center;
@@ -47,28 +45,19 @@ nav {
     outline: none;
 }
 
->>>>>>> 8b136a8 (created nav and updated experiance and leave a message using flexbox)
 #intro, h2 {
     text-align: center;
 }
 
 h3 {
     font-size: 30px;
-<<<<<<< HEAD
-    margin-top: 100px;
-=======
     margin-top: 30px;
     margin-bottom: 10px;
->>>>>>> 8b136a8 (created nav and updated experiance and leave a message using flexbox)
 }
 
 h1 {
     font-size: 40px;
-<<<<<<< HEAD
-=======
     margin: 0 auto;
->>>>>>> 8b136a8 (created nav and updated experiance and leave a message using flexbox)
-    
 }
 
 h4 {
@@ -97,15 +86,13 @@ a:hover {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
+
 #experiance ul {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
 }
 
->>>>>>> 8b136a8 (created nav and updated experiance and leave a message using flexbox)
 form {
     display: flex;
     flex-direction: column;
@@ -168,8 +155,7 @@ footer p {
     margin: 0 200px ;
     }
     
-<<<<<<< HEAD
-=======
+
 }
 
 @media screen and (max-width: 7676px) {
@@ -182,5 +168,5 @@ footer p {
         width: 100%;
         flex-direction: column;
     }
->>>>>>> 8b136a8 (created nav and updated experiance and leave a message using flexbox)
+    
 }
