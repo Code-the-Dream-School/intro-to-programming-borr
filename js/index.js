@@ -10,17 +10,31 @@ footer.appendChild(copyright);
 
 const skills = ["HTML", "CSS", "JS", "REACT"];
 const skillsSection = document.getElementById('skills');
-
 const skillsList = skillsSection.querySelector('ul');
 
 for(i = 0; i < skills.length; i++) {
   const skill = document.createElement('li');
   skill.textContent=skills[i];
-  skillsList.appendChild(skill); 
-
+  skillsList.appendChild(skill);
+  
 };
 
-console.log(skillsList);
+// style the skills list // works
+// const skillsListItems = document.querySelector('#skills').getElementsByTagName('li');  
+// console.log(skillsListItems[0]);
+
+// for(i = 0; i < skillsListItems.length; i++) {
+//   skillsListItems[i].style.backgroundColor = 'white'; 
+//   skillsListItems[i].style.listStyle = 'none';
+//   skillsListItems[i].style.marginBottom = '.25rem';
+//   skillsListItems[i].style.padding = '.40rem';
+//   skillsListItems[i].style.maxWidth = 'fit-content';
+//   skillsListItems[i].style.backgroundColor = 'white'; 
+//   skillsListItems[i].style.borderRadius = '.5rem';
+// }
+
+
+// console.log(skillsList);
 
 
 // v3 works
@@ -43,19 +57,20 @@ messageForm.addEventListener("submit", function(e) {
   // validate forms
   if(nameValue === ''  || emailValue === '' || messageValue === '') {
     alert("Please fill out all fields");
-    return false      
+    return false;      
   };
 
   const messageSection = document.querySelector('#messages');
   const messageList = messageSection.querySelector('ul');
+  const meessageHeader = document.querySelector('#messages-header');
+  console.log(meessageHeader);
 
   // hide messages by default
-  messageSection.style.display = 'none';
-
+  meessageHeader.style.display = 'none';
  
   // show emailto link using name, and show the message
   const newMessage = document.createElement('li');
-  newMessage.innerHTML=`<a style="color:orange;" href="mailto:${emailValue}">${nameValue}</a> <span> wrote: ${messageValue}</span>`; 
+  newMessage.innerHTML=`<a style="color:brown;" href="mailto:${emailValue}">${nameValue}</a> <span> wrote: ${messageValue}</span>`; 
   // newMessage.innerText=`<span>${messageValue}</span>`; 
 
   // crate removeButton
@@ -69,6 +84,7 @@ messageForm.addEventListener("submit", function(e) {
 
   // add newMessage to messageList
   messageList.appendChild(newMessage);
+  // document.getElementById("messages-header").classList.remove("hide");  works
 
   // click remove Button to delete each newMessage
   removeButton.addEventListener('click', function (){
@@ -77,6 +93,13 @@ messageForm.addEventListener("submit", function(e) {
     // console.log(`removeButton previousSibling:` + removeButton.previousSibling);
     // console.log(`removeButton getparentNode:` + removeButton.parentNode);
     entry.remove();
+
+    // if it's the last message, hide "Messages h2"
+    if(messageList.hasChildNodes() === false) {
+      // document.getElementById("messages-header").classList.add("hide"); works
+      meessageHeader.style.display = 'none';
+      
+    };
   })  
   
   // add edit button
@@ -96,17 +119,18 @@ messageForm.addEventListener("submit", function(e) {
     });
 
 
+  // console.log(newMessage);
+  // console.log(removeButton);
 
-  console.log(messageSection);  
-  console.log(newMessage);
-  console.log(removeButton);
-
-  // check if messageSection is empty, hidden by default in index.html
-    messageSection.style.display =  messageList.hasChildNodes() ? "block": "none";
+  // check if messageSection is empty, hidden by default in index.html below 
+  // messageSection.style.display =  messageList.hasChildNodes() ? "block": "none"; doesn't work because I chose the parent element instead of the H2 element
   
+  meessageHeader.style.display =  messageList.hasChildNodes() ? "block": "none";
+  console.log(meessageHeader);  
+
   messageForm.reset();
 
 });
 
 
-// <a href="mailto:johndoe@fakeemail.com">Example mailto link</a>
+

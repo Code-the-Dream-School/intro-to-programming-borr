@@ -4,44 +4,62 @@
 <head>
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="James H. Nguyen's Front End Developer Portfolio">
-  <link rel="stylesheet" href="main.css"/>
+  <link rel="stylesheet" href="css/index.css"/>
   <style>
-    @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap');
+
+    @media only screen and (max-wdith: 942px) {
+  body {
+    background-color: green;
+  }
+}
+
   </style>
   <title>James H. Nguyen's Portfolio</title>
 </head>
 
 <body>
-
-  <section>
-    <h1>James H. Nguyen</h1>
-    <div class="typeWrapper">
-      <div class="typewriter">
-        <p>Front End Developer</p>
+  <!-- <section class = "header" h1-hover-after="Front End Developer"> -->
+    <!-- James H. Nguyen -->
+    <div class = "nav-bar">
+      <div class="w-100">  
+          <span class = "classheader" id = "idheader" h1-hover-after="Front End Developer"> James H. Nguyen</span>
       </div>
+      <nav>    
+        <a class="nav-item" href = "#skills-h2">Skills</a>
+        <a class="nav-item" href = "#exprience">Experience</a>
+        <a class="nav-item" href = "#contact">Contact</a>
+        <a class="nav-item" href = "#about">About</a> 
+      </nav>
     </div>
-  </section>
+  
   <section>
-    <h2>About</h2>
+    <h2 id="about">About</h2>
       <p> I enjoy all things design-related, from graphic to industrial.  Recently I've also started learning digital marketing, completed a UX / UI course, and now am learning front end coding.</p>    
     </section>
 
-  <section>
-  <h2>Experience</h2>
+  <section class = "experience">
+  <h2 id="experience">Experience</h2>
       <ul>
-        <li>Ecommerce Email Design, SFuel Agency</li>
-        <li>Content Strategist, SketchWow</li>
+        <li>
+          <span class = "job-title">Ecommerce Email Design, </span> 
+          <span class = "company-name">ShopFuel</span>
+        </li>
+        <li>
+          <span class = "job-title">Content Strategist, </span> 
+          <span class = "company-name">SketchWow</span>
+        </li>
       </ul>
   </section>
-  <section id="skills">
-    <h2>Skills</h2>
+  <section id = "skills">
+    <h2 id="skills-h2">Skills</h2>
     <ul>
       
     </ul>
 
   </section>
-  <section>
+  <section style = "display: none";>
     <h2>Connect</h2>
       <ul>   
        <li>curiousBellyButton@private.com</li>
@@ -49,8 +67,8 @@
        <li>https://github.com/curiousBellyButton</li>
      </ul>
   </section>
-  <section>
-    <h2>Leave a Message</h2>
+  <section class = "leave-message">
+    <h2 id="contact" style="visibility: hidden";>Leave a Message</h2>
     <form name="leave_message">
       <label for="name">Name: </label>
       <br>
@@ -69,7 +87,7 @@
     </form>
   </section>
   <section id="messages">
-    <h2 style="display: none";>Messages</h2>
+    <h2 id="messages-header" class="hide" style="display: none;">Messages</h2>
     <ul></ul>
   </section>
   <footer>
