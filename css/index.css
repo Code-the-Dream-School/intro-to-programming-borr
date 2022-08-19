@@ -114,6 +114,11 @@ form {
  margin-left: 10px;
 }
 
+.form-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:0px;
+}
 /* 
 use h2 color instead  to create consistency
 
@@ -158,10 +163,9 @@ button {
 #messages li {
   margin-left: 1.75rem;
   margin-bottom: 1rem;
-  /* list-style: none; */
-  /* list-style-type: kannada; */
   list-style-type: decimal-leading-zero;
 }
+
 #messages button {
   margin-left: 1rem;
   max-width: fit-content;
@@ -225,6 +229,23 @@ nav {
   margin: 5px;
 }
 
+/* effects */
+
+
+#img-vg5 {
+  width: 10%;
+  height: auto;
+}
+
+
+.leave-message:hover {
+  background-image: URL("../images/vg5.gif");  
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+}
+
+
 
 /* @media only screen and (max-width: 942px) {
   // moves menus beneath name
@@ -244,18 +265,17 @@ nav {
     grid-template-columns: 1fr;
   }
 
+  /* fixes button backround responsiveness */
   nav {
     flex-wrap: wrap;
   }
-    
-}
+}+
 
+/* doesn't work
 @media only screen and (max-width: 350px) {
   .experience-container {
     grid-template-columns: 1fr;
-    grid-gap: 50px;
-    
-    
+    grid-gap: 50px;    
   }
 
-}
+} */
