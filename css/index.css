@@ -1,11 +1,15 @@
 html {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
+  
 }
 
 body {
   background-color: lightgrey;
   color: black;
+  margin: 0px;
+  padding: 10px;
+  width: 100vw;
 }
 a {
   text-decoration: none;
@@ -46,8 +50,18 @@ nav ul li {
   color: salmon;
 }
 
-h2 {
+h2, label {
   color: gray;
+  color: #1565c0;
+}
+
+#about-summary  {
+  margin-left: 10px;
+}
+
+/* allows the jobtitle and company name to stay one 1 line at w375px */
+ul {
+  padding: 10px;
 }
 
 .experience li {
@@ -90,19 +104,20 @@ h2 {
 }
 
 form {
-  /* background-image: URL("../images/envelope1.png");   */
-  background-repeat: no-repeat;
-  background-size: 20%;
+ margin-left: 10px;
 }
+
+/* 
+use h2 color to create consistency
 
 .leave-message h2 {
   color: black;
 }
+ */
 
 label {
   font-weight: 600;
-  /* color: cornflowerblue; */
-  color: black;
+  /* color: black; */
 }
 
 input,
@@ -119,16 +134,19 @@ textarea {
 }
 
 button {
-  background-color: black;
+  background-color: #1565c0;
   color: white;
   width: 13.3rem;
   font-size: 1rem;
   height: 1.5rem;
   border-radius: 0.25rem;
+  border: none;
 }
+
+
 #messages h2 {
   color: black;
-}
+} 
 
 #messages li {
   margin-bottom: 1rem;
@@ -159,13 +177,14 @@ footer {
   display: none;
 }
 
-.nav-bar {
-  width: 100%;
-  display: flex;
-}
 
 #idheader {
   width: 100%;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
 }
 
 nav {
@@ -175,11 +194,11 @@ nav {
   align-items: center;
 }
 
-#nav-list {
+/* #nav-list {
   padding: 0;
   display: flex;
   align-items: center;
-}
+} */
 
 .w-100 {
   width: 100%;
@@ -206,7 +225,12 @@ nav {
 }
 
 @media only screen and (max-width: 942px) {
+  /* moves menus beneath name */
   .nav-bar {
+    flex-wrap: wrap;
+  }
+  /* fixes button backround responsiveness */
+  nav {
     flex-wrap: wrap;
   }
 }
