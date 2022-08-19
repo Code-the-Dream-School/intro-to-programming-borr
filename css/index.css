@@ -11,6 +11,7 @@ body {
   padding: 10px;
   width: 100vw;
 }
+
 a {
   text-decoration: none;
 }
@@ -30,6 +31,7 @@ nav ul li {
   background-color: rgb(165, 197, 255);
   background-color: #f9ebd6;
 }
+
 #idheader {
   font-family: "Share Tech", sans-serif;
   font-size: 4rem;
@@ -71,6 +73,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
+
 .job-title {
   /* margin-bottom: .5rem; */
   margin-right: 0.25rem;
@@ -108,7 +111,7 @@ form {
 }
 
 /* 
-use h2 color to create consistency
+use h2 color instead  to create consistency
 
 .leave-message h2 {
   color: black;
@@ -143,7 +146,6 @@ button {
   border: none;
 }
 
-
 #messages h2 {
   color: black;
 } 
@@ -161,8 +163,6 @@ button {
   border: none;
 }
 footer {
-  height: 2rem;
-  background-color: #f9ebd6;
   display: flex;
 
   /* X-axis */
@@ -170,6 +170,9 @@ footer {
 
   /* Y-axis */
   align-items: center;
+  height: 2rem;
+  background-color: #f9ebd6;
+  
 }
 
 
@@ -180,16 +183,20 @@ footer {
 
 #idheader {
   width: 100%;
-}
+} 
 
 .nav-bar {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2.65fr 1fr;
+  
+  /* display: flex; */
 }
 
 nav {
   display: flex;
   margin-top: 10px;
+
   /* flex-wrap: wrap; */
   align-items: center;
 }
@@ -224,12 +231,25 @@ nav {
   
 }
 
-@media only screen and (max-width: 942px) {
-  /* moves menus beneath name */
+
+/* @media only screen and (max-width: 942px) {
+  // moves menus beneath name
   .nav-bar {
     flex-wrap: wrap;
   }
-  /* fixes button backround responsiveness */
+  // fixes button backround responsiveness
+  nav {
+    flex-wrap: wrap;
+  }
+} */
+
+
+@media only screen and (max-width: 980px) {
+  .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   nav {
     flex-wrap: wrap;
   }
