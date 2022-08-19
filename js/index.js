@@ -70,7 +70,7 @@ messageForm.addEventListener("submit", function(e) {
  
   // show emailto link using name, and show the message
   const newMessage = document.createElement('li');
-  newMessage.innerHTML=`<a style="color:brown;" href="mailto:${emailValue}">${nameValue}</a> <span> wrote: ${messageValue}</span>`; 
+  newMessage.innerHTML=`<a style="color:#00bcd4; font-weight:bold;" href="mailto:${emailValue}">${nameValue}</a> <span> wrote: ${messageValue}</span>`; 
   // newMessage.innerText=`<span>${messageValue}</span>`; 
 
   // crate removeButton
