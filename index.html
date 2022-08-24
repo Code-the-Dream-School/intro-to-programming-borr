@@ -39,10 +39,33 @@
         
     </section>
 
-    <footer>
-        
-    </footer>
+    <section>
+        <h2>Leave a Message</h2>
+        <form action="index.html" method="post" name="leave_message">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
 
+            <label for="email">Email:</label>
+            <input type="emai" id="email" name="email" required><br>
+
+            <label for="comment">Your Message:</label>
+            <textarea id="comment" name="message" name="message" required></textarea><br>
+            
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+    </section>
+
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul>
+            
+        </ul>
+
+    </section>
+
+    <footer></footer>
+
+    <!-- JS -->
     <script src="js/index.js"></script>
     
 </body>
