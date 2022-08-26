@@ -1,0 +1,12 @@
+const today = new Date();
+const thisYear = today.getFullYear();
+const container = document.querySelector('#container');
+const copyright = document.createElement('copyright');
+copyright.innerHTML = '<span>Pramote+thisYear</span>';
+container.appendChild(copyright);
+const skills = ['financial analyst', 'risk management'];
+const skillsSection = getElementById('skills');
+const skillsList = document.querySelector("h2");
+for (num in skills) {
+  skill[num] = document.createElement();
+}
