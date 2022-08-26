@@ -44,7 +44,7 @@ messageForm.addEventListener('submit', (event) => {
     const newMessage = document.createElement('li');    
     newMessage.insertAdjacentHTML(
         'afterbegin',
-        `<a href="mailto:${email.value}">${name.value}</a> wrote <span>${message.value} </span>`
+        `<a href="mailto:${email.value}">${name.value}</a> wrote: <span>${message.value} </span>`
     )
 
     newMessage.append(removeButton);

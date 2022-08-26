@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blanchedalmond;
+    color: darkslategray;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+}
+
+section {
+    border: 1px solid black;
+    margin: 8px;
+}
+
+/* Change the font size, weight, and color of all headings */
+h1, h2, h3 {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: crimson;
+}
+
+/* Transform the "Experience" list items into styled blocks */
+#experience {
+    padding: 15px;
+    background-color: azure;
+}
+
+
+/* Transform the "Skills" list items into styled blocks */
+#skills {
+    background-color: rgb(185, 207, 246);
+    padding: 15px;
+}
+
+#skills ul {
+    list-style-type: square;
+    list-style-position: outside;
+    font-size: 1.1rem;
+    
+}
+
+
+/* Style the "Leave a Message" form elements */
+
+/* Change font size and color of labels */
+form label {
+    color: rgb(22, 49, 149);
+    font-size: small;
+}
+
+/* Change font size, padding, border, etc. of inputs and textarea */
+form input, form textarea {
+    color: deeppink;
+    padding: 5px;
+    border: 2px dotted gray;
+    margin: 20px 5px;
+    vertical-align: middle;
+}
+
+/* Change padding, background color, border, etc. of submit button */
+
+form button {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 8px 14px;
+}
+
+form button:hover {
+  background-color: #fff;
+  color: #FF4742;
+}
+
+form button:active {
+  opacity: .5;
+}
+
+
+/* Transform the "Messages" list items into styled blocks and customize the button(s) */
+#messages {
+    padding: 15px;
+    background-color: floralwhite;
+    color: #FF4742;
+}
+
+
+#messages li {
+    color: black;
+    font-style: italic;
+}
+
+#messages li a {
+    color: #FF4742;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.3rem;
+    border-radius: 1px solid black;
+    padding: 0px 10px;
+}
+
+
+#messages li span {
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    padding: 0px 10px;
+
+}
+
+#messages button {
+    margin-left: 10px;
+    border-radius: 6px;
+    color: #FF4742;
+    background: floralwhite;
+    border: 1px solid #FF4742;
+}
+
+#messages button:hover {
+    background-color: #FF4742;
+    color: #fff;
+}
+
+
+/* Change the spacing and background color of the footer */
+footer {
+    background-color:lightseagreen;
+    letter-spacing: 1px;
+}
