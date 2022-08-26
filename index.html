@@ -8,95 +8,80 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap');
-
-    @media only screen and (max-wdith: 942px) {
-  body {
-    background-color: green;
-  }
-}
-
   </style>
   <title>James H. Nguyen's Portfolio</title>
 </head>
 
 <body>
-  <!-- <section class = "header" h1-hover-after="Front End Developer"> -->
-    <!-- James H. Nguyen -->
-    <div class = "nav-bar">
-      <div class="w-100">  
-          <span class = "classheader" id = "idheader" h1-hover-after="Front End Developer"> James H. Nguyen</span>
-      </div>
-      <nav>    
-        <a class="nav-item" href = "#skills-h2">Skills</a>
-        <a class="nav-item" href = "#exprience">Experience</a>
-        <a class="nav-item" href = "#contact">Contact</a>
-        <a class="nav-item" href = "#about">About</a> 
-      </nav>
+  <div class = "nav-bar">
+    <div class="w-100">  
+        <span class = "classheader" id = "idheader" h1-hover-after="Front End Developer"> James H. Nguyen</span>
     </div>
+    <nav>    
+      <a class="nav-item" href = "#skills-h2">Skills</a>
+      <a class="nav-item" href = "#exprience">Experience</a>
+      <a class="nav-item" href = "#contact">Contact</a>
+      <a class="nav-item" href = "#about">About</a> 
+    </nav>
+  </div>
   
   <section>
     <h2 id="about">About</h2>
-      <p> I enjoy all things design-related, from graphic to industrial.  Recently I've also started learning digital marketing, completed a UX / UI course, and now am learning front end coding.</p>    
-    </section>
+    <p id="about-summary"> I enjoy all things design-related, from graphic to industrial.  Recently I've also started learning digital marketing, completed a UX / UI course, and now am learning front end coding.</p>    
+  </section>
 
   <section class = "experience">
-  <h2 id="experience">Experience</h2>
-      <ul>
-        <li>
-          <span class = "job-title">Ecommerce Email Design, </span> 
-          <span class = "company-name">ShopFuel</span>
-        </li>
-        <li>
-          <span class = "job-title">Content Strategist, </span> 
-          <span class = "company-name">SketchWow</span>
-        </li>
-      </ul>
+    <h2 id="experience">Experience</h2>      
+    <div class = "experience-container"> 
+      <div>
+        <p><span class="job-title">Eommerce Email Design,</span> <span class="company-name">ShopFuel</span></p>
+      </div>
+      <div>
+        <span class="job-title">Content Strategist,</span> <span class="company-name">SketchWow</span>
+      </div>       
+    </div> 
   </section>
+  
   <section id = "skills">
     <h2 id="skills-h2">Skills</h2>
-    <ul>
-      
-    </ul>
-
+    <ul></ul>
   </section>
+  
   <section style = "display: none";>
     <h2>Connect</h2>
-      <ul>   
-       <li>curiousBellyButton@private.com</li>
-       <li>https://www.linkedin.com/in/james-o-5a388a223/</li>
-       <li>https://github.com/curiousBellyButton</li>
-     </ul>
+    <ul>   
+      <li>curiousBellyButton@private.com</li>
+      <li>https://www.linkedin.com/in/james-o-5a388a223/</li>
+      <li>https://github.com/curiousBellyButton</li>
+    </ul>
   </section>
+  
   <section class = "leave-message">
-    <h2 id="contact" style="visibility: hidden";>Leave a Message</h2>
+    <h2 class="contact-vc">Virtual Coffee?</h2> 
     <form name="leave_message">
-      <label for="name">Name: </label>
-      <br>
-      <input type="text" id="name" name="name">
-      <br>
-      <label for="email">Email: </label>
-      <br>
-      <input type ="email" id="email" name="email">
-      <br>
-      <label for="message">Message: </label>
-      <br>
-      <textarea id="message" name="message"></textarea>
-      <br>
-      <button type="submit" id="submit">Submit</button>
-
+      <div class="form-grid-container">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email: </label>
+        <input type ="email" id="email" name="email">
+        <label for="message">Message: </label>
+        <textarea id="message" name="message"></textarea>
+        <button type="submit" id="submit">Let's Talk</button>
+      </div>  
     </form>
   </section>
+
   <section id="messages">
     <h2 id="messages-header" class="hide" style="display: none;">Messages</h2>
     <ul></ul>
   </section>
-  <footer>
-
+  
+  <footer> 
   </footer>
+
   <script src="js/index.js"></script>
 
-  </body>
-
+</body>
 </html>
 
 

@@ -19,7 +19,7 @@ for(i = 0; i < skills.length; i++) {
   
 };
 
-// style the skills list // works
+// style the skills list // works but use CSS instead!
 // const skillsListItems = document.querySelector('#skills').getElementsByTagName('li');  
 // console.log(skillsListItems[0]);
 
@@ -70,11 +70,10 @@ messageForm.addEventListener("submit", function(e) {
  
   // show emailto link using name, and show the message
   const newMessage = document.createElement('li');
-  newMessage.innerHTML=`<a style="color:brown;" href="mailto:${emailValue}">${nameValue}</a> <span> wrote: ${messageValue}</span>`; 
-  // newMessage.innerText=`<span>${messageValue}</span>`; 
-
-  // crate removeButton
-  // <button type="button">Click Me!</button>
+  // moved spand after "wrote" to restrict prevent it from being editable  
+  newMessage.innerHTML=`<a style="color:#00bcd4; font-weight:bold;" href="mailto:${emailValue}">${nameValue}</a> wrote: <span> ${messageValue}</span>`; 
+  
+  // create removeButton
   const removeButton = document.createElement('button');
   removeButton.innerText = "remove";
   removeButton.type = "button";
@@ -104,23 +103,28 @@ messageForm.addEventListener("submit", function(e) {
   
   // add edit button
   const editButton = document.createElement('button');
-  editButton.innerText = "edit";
+  editButton.innerText = "edit message";
   editButton.type = "button";
   
   // add edit button to newMessage
   newMessage.appendChild(editButton);
   
-  // click editButton to repopulate the 3 message fields with the same values and possibly remove the existing submitted message
+  // v.1 click editButton to repopulate the 3 message fields with the same values and possibly remove the existing submitted message
+  // v.2 edit using contentEditable instead
 
-    editButton.addEventListener('click', function() {
-      messageForm.name.value = nameValue;
-      messageForm.email.value = emailValue;
-      messageForm.message.value = messageValue;      
-    });
-
-
-  // console.log(newMessage);
-  // console.log(removeButton);
+  editButton.addEventListener('click', function() {
+    // v1 workes but not desirable
+    // messageForm.name.value = nameValue;
+    // messageForm.email.value = emailValue;
+    // messageForm.message.value = messageValue;
+    
+	  for (i = 0; i < messageList.children.length; i++) {
+      // console.log(`messageList i:` + i);
+      console.log(`messageList i click:` + i);
+      messageList.children[i].querySelector('span').contentEditable = 'true';
+      messageList.children[i].querySelector('span').style.border = "1px dashed white";         
+    }       
+	});
 
   // check if messageSection is empty, hidden by default in index.html below 
   // messageSection.style.display =  messageList.hasChildNodes() ? "block": "none"; doesn't work because I chose the parent element instead of the H2 element
