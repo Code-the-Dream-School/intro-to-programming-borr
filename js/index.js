@@ -38,3 +38,18 @@ messageForm.addEventListener('submit', function(e) {
   });
   document.getElementById('leave_message').reset();
 })
+
+var githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/pramotesuewiroj/repos", true);
+githubRequest.send();
+githubRequest.onload = function() {
+  var repositories = JSON.parse(this.responseText);
+  console.log(repositories);
+};
+var projectSection = document.getElementById('projects');
+var projectList = projectSection.getElementsByTagName('ul')[0];
+for (var i=0; i < repositories.length; i++) {
+  var project = document.createElement('li');
+  project.innerText = repositories[i];
+  projectList.appendChild(project);
+ }
