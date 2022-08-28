@@ -43,13 +43,13 @@ var githubRequest = new XMLHttpRequest();
 githubRequest.open("GET", "https://api.github.com/users/pramotesuewiroj/repos", true);
 githubRequest.send();
 githubRequest.onload = function() {
-  var repositories = JSON.parse(this.responseText);
+  const repositories = JSON.parse(this.responseText);
   console.log(repositories);
+  let projectSection = document.getElementById('projects');
+  let projectList = projectSection.getElementsByTagName('ul')[0];
+  for (let i=0; i < repositories.length; i++) {
+    const project = document.createElement('li');
+    project.innerText = repositories[i].name;
+    projectList.appendChild(project);
+  }
 };
-var projectSection = document.getElementById('projects');
-var projectList = projectSection.getElementsByTagName('ul')[0];
-for (var i=0; i < repositories.length; i++) {
-  var project = document.createElement('li');
-  project.innerText = repositories[i];
-  projectList.appendChild(project);
- }
