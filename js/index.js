@@ -5,7 +5,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('copyright');
 copyright.innerHTML = 'Pramote '+thisYear;
 footer.appendChild(copyright);
-const skills = ['financial analyst', 'risk management'];
+const skills = ['financial analyst', 'risk management', 'credit risk managemetn', 'market risk management', 'investment risk management'];
 const skillsSection = document.getElementById('skills');
 const skillsList = document.querySelector("h2");
 for (let num in skills) {

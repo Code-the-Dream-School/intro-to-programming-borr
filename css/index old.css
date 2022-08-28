@@ -58,39 +58,3 @@ span {
   background-color: rgb(65, 238, 108);
   border: 5px;
 }
-
-.flex-container {
-  display: flex;
-}
-
-.flex-container a {
-  color: black;
-  background: rgb(239, 178, 125);
-  border: 1px solid brown;
-  height: 30px;
-  margin: 10px;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.flex-container div {
-  margin: 3px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: #2196F3;
-  padding: 3px;
-}
-
-.grid-item {
-  background-color: rgba(239, 52, 52, 0.8);
-  padding: 5px;
-  font-size: 15px;
-}
-
-@media (max-width: 600px) {
-  body {
-    margin: 8px;
-  }
