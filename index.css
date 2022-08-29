@@ -8,18 +8,56 @@ body{
     color: seashell;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+.nav-ul li a{
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
 #intro, h2 {
     text-align: center;
 }
 
 h3 {
     font-size: 30px;
-    margin-top: 100px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 h1 {
     font-size: 40px;
-    
+    margin: 0 auto;
 }
 
 h4 {
@@ -46,6 +84,13 @@ a {
 a:hover {
     color: rgb(238, 108, 231);
     cursor: pointer;
+}
+
+
+#experiance ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
 form {
@@ -108,6 +153,20 @@ footer p {
 
     section {
     margin: 0 200px ;
+    }
+    
+
+}
+
+@media screen and (max-width: 7676px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-ul.show {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
     }
     
 }

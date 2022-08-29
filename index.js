@@ -1,3 +1,5 @@
+
+
 const today = new Date()
 const thisYear= today.getFullYear()
 
@@ -94,5 +96,10 @@ messageForm.addEventListener("submit", (e) => {
 
     
 
-    
-    
+
+    const hamburger = document.getElementsById('hamburger')
+    const navUL = document.getElementsByClassName('nav-ul')
+
+    hamburger.addEventListener('click', () => {
+        navUL.classList.toggle('show');
+    })
