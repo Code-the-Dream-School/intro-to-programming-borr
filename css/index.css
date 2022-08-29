@@ -1,61 +1,79 @@
 body {
-  background-color: rgb(53, 87, 100);
-  color: rgb(255, 234, 17);
-  font-family: "monospace" sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier New", sans-serif;
   font-size: 18px;
 }
 
+.container {
+  max-width: 1024px;
+  width: 90vw;
+  padding: 1rem 0px;
+  margin: 0px auto;
+}
+
+section {
+    padding: 0.5rem;
+}
 /* changing color, font-weight, and size of headings */
-h1,
-h2 {
-  color: palegoldenrod;
-  font-weight: 800;
-  font-size: 28px;
-  margin: 30px;
-}
-
-/* Transformed "Experience" and "skils" list items into styled blocks */
-.box {
-  width: 650px;
-  background-color: rgb(90, 143, 123);
-
-  margin: 30px;
-  border: none;
-  border-radius: 10px;
-  padding: 40px;
-}
-
-#my-skills {
-  width: 235px;
-  color: rgb(150, 234, 240);
+h1, h2 {
+  color: rgb(255, 228, 0);
   font-weight: 600;
-  background-color: rgb(90, 143, 123);
-
-  margin: 30px;
-  border: none;
-  border-radius: 10px;
-  padding: 30px 30px 30px 55px;
+  margin-bottom: 0.5rem;
 }
+.tag:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(92, 219, 149);
+  border-image: initial;
+  padding: 0.25rem 0.75rem;
+}
+
+
+.card {
+  background-color: rgb(92, 219, 149);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.card:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
 
 .social-links {
   width: 100px;
   color: rgb(255, 234, 17);
-  background-color: rgb(129, 202, 207);
-
+  background-color: rgb(92, 219, 149);
   margin: 30px;
-  border: none;
   border-radius: 10px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
   padding: 30px 30px 30px 55px;
 }
-
 form[name="leave_message"] {
   width: 190px;
-  color: rgb(53, 87, 100);
-  background-color: rgb(129, 202, 207);
+  background-color: rgb(92, 219, 149);
   font-weight: 600;
-
+  color: white;
   margin: 30px;
-  border: none;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
   border-radius: 10px;
   padding: 30px;
 }
@@ -74,6 +92,11 @@ form[name="leave_message"] {
 .removeMessageButton {
   background-color: rgb(255, 234, 17);
   font-weight: 600;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
 }
 
 #footer {

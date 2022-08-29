@@ -1,29 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Lesson 4.4</title>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Lesson 4.5</title>
   </head>
-  <body>
-    <section>
-      <h1>About Me:</h1>
-      <p class="box bio">
-        Hello! My name is Alejandro, I am a transfer student attending San Jose
-        State University in the fall of 2022. I have a keen interest and passion
-        for music, computer languages and art, and I believe there is a creative
-        fusion between these disciplines. I engage wholeheartedly in these areas
-        both in school courses and outside of school, and I hope that I will be
-        able to continue doing so as I transfer to University.
+  <body><main>
+    <div class="container">
+    <section id="about">
+      <h1>About Me</h1>
+      <p class="box bio"> 
+        Hello, My name is Alejandro! <br><br>
+        I'm a first-generation college student attendiong San Jose State University. 
+        I have a keen interest and passion for computer laguages, music, art, and I believe there is a creative
+        fusion between these disciplines. I am an aspiring software developer with a human 
+        centerd approach to the web. 
       </p>
-      <h1>Experience:</h1>
-      <p class="box experience">
+      <p>Pronouns: <strong>he/him/his</strong></p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul role="list">
+          
+        <li class="tag">Javascript</li><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">C++</li><li class="tag">Bilingual</li><li class="tag">Punctual</li><li class="tag">Self-starter</li></ul>
+      </section>
+
+    <section id="experience">
+      <h1>Experience</h1>
+      <ul role="list">
+        <li class="card">
+          <span>
+            <strong>Student Government</strong> - West Valley College
+          </span>
+          <span class="emphasis">Aug 2019 - 2022 </span>
+        </li>
+        <li class="card">
+          <span>
+            <strong>Middle School Math &amp; Science Tutor</strong> — West Valley College
+          </span>
+          <span class="emphasis">Sept 2021 - May 2022</span>
+        </li>
+        <li class="card">
+          <span> 
+            <strong>Code The Dream Apprenticeship</strong> — <a href="https://learn.codethedream.org/">Code The Dream School</a>
+          </span>
+            <span class="emphasis"> July 2022 - Present</span>
+        </li>
+        <li class="card">
+          <span>
+            <strong>DreamSF Fellow</strong> — <a href="https://sf.gov/departments/city-administrator/office-civic-engagement-and-immigrant-affairs">OCEIA</a>
+          </span>
+            <span class="emphasis">July 2022 - Present</span>
+        </li>
+        <li class="card">
+          <span>
+            <strong>MEDA Evaluation</strong> — <a href="https://medasf.org/">Mission Economic Development Agency</a>
+          </span>
+            <span class="emphasis">July 2022 - Present</span>
+        </li>
+        </ul>
+    </section>
+      <!-- going to add this as a toggle button to explain my role in fellowship
+        <p class="box experience"> 
         As a DreamSF Fellow, I am placed in the evaluations department at
-        <a href="http://medasf.org"
-          >Mission Economic Development Agency (MEDA)</a
-        >, where I will assist in the research and evaluation of MEDA’s
+        <a href="http://medasf.org">Mission Economic Development Agency (MEDA)</a>,
+        where I will assist in the research and evaluation of MEDA’s
         programs. I will support two major project areas: the development of
         internal planning initiatives and the evaluation of pandemic recovery
         measures. Here, I will gain practical experience in all areas of
@@ -32,44 +75,43 @@
         management, and product development. I am thankful for opportunity to
         work with the MEDA team and gain skills that will shape future careers!
       </p>
-      <section id="skills">
-        <h2>Skills:</h2>
-        <ul id="my-skills"></ul>
+    </section> -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/Alejandro-Patino-Camargo/intro-to-programming-borr">Intro-to-Programming Borr</a>
+          </li>
+        </ul>
       </section>
+      <section id="social-links">
       <h1>Connect With Me!</h1>
-      <ul class="social-links">
-        <li>
-          <a href="http://www.linkedin.com/in/alejandropatinoc">LinkedIn</a>
-        </li>
-        <li>
-          <a href="https://github.com/Alejandro-Patino-Camargo">GitHub </a>
-        </li>
-        <li><a href="https://vsco.co/nnotalee/gallery">VSCO</a></li>
-      </ul>
-    </section>
-    <section>
+        <ul class="social-links">
+          <li><a href="http://www.linkedin.com/in/alejandropatinoc">LinkedIn</a></li>
+          <li><a href="https://github.com/Alejandro-Patino-Camargo">GitHub </a></li>
+          <li><a href="https://vsco.co/nnotalee/gallery">VSCO</a></li>
+        </ul>
+      </section>
+    <section id="contact">
       <h2>Leave Message</h2>
-      <form name="leave_message">
-        <label for="username">Name:</label><br />
-        <input type="text" name="name" required /><br />
-        <label for="email">Email:</label><br />
-        <input type="email" name="email" required />
-        <br />
-        <label for="Message">Message:</label><br />
-        <textarea
-          name="message"
-          placeholder="Enter a message here"
-          required
-        ></textarea
-        ><br />
+        <form name="leave_message">
+          <label for="username">Name:</label><br>
+          <input type="text" name="name" required=""><br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" required=""><br>
+            <label for="Message">Message:</label><br>
+        <textarea name="message" placeholder="Enter a message here" required=""></textarea><br>
         <button class="button submit" type="submit">Submit</button>
       </form>
     </section>
-    <section id="messages">
+    
+    <section id="messages-list">
       <h2>Messages</h2>
       <ul id="messageList"></ul>
     </section>
-    <footer id="footer"></footer>
+    </div>
+     </main>
+    <footer id="footer"><p></p></footer>
     <script src="js/index.js"></script>
   </body>
 </html>
