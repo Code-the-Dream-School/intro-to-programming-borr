@@ -118,13 +118,50 @@ messageForm.addEventListener("submit", function(e) {
     // messageForm.email.value = emailValue;
     // messageForm.message.value = messageValue;
     
-	  for (i = 0; i < messageList.children.length; i++) {
-      // console.log(`messageList i:` + i);
-      console.log(`messageList i click:` + i);
-      messageList.children[i].querySelector('span').contentEditable = 'true';
-      messageList.children[i].querySelector('span').style.border = "1px dashed white";         
-    }       
+    // console.log(this.parentNode.querySelector('span'))
+
+    const textToEdit = this.parentNode.querySelector('span')
+    textToEdit.contentEditable = 'true';
+    textToEdit.style.border = "1px dashed white";    
+
+	  // for (i = 0; i < messageList.children.length; i++) {
+    //   // console.log(`messageList i:` + i);
+    //   console.log(`messageList i click:` + i);
+    //   messageList.children[i].querySelector('span').contentEditable = 'true';
+    //   messageList.children[i].querySelector('span').style.border = "1px dashed white";         
+    // }   
+  
 	});
+
+   // add save button
+   const saveButton = document.createElement('button');
+   saveButton.innerText = "save";
+   saveButton.type = "button";
+   
+   // add edit button to newMessage
+   newMessage.appendChild(saveButton);
+
+   saveButton.addEventListener('click', function() {
+    // v1 workes but not desirable
+    // messageForm.name.value = nameValue;
+    // messageForm.email.value = emailValue;
+    // messageForm.message.value = messageValue;
+    
+    // console.log(this.parentNode.querySelector('span'))
+
+    const textToEdit = this.parentNode.querySelector('span')
+    textToEdit.contentEditable = 'false';
+    textToEdit.style.border = "none";    
+
+	  // for (i = 0; i < messageList.children.length; i++) {
+    //   // console.log(`messageList i:` + i);
+    //   console.log(`messageList i click:` + i);
+    //   messageList.children[i].querySelector('span').contentEditable = 'true';
+    //   messageList.children[i].querySelector('span').style.border = "1px dashed white";         
+    // }   
+  
+	});
+
 
   // check if messageSection is empty, hidden by default in index.html below 
   // messageSection.style.display =  messageList.hasChildNodes() ? "block": "none"; doesn't work because I chose the parent element instead of the H2 element
@@ -135,6 +172,34 @@ messageForm.addEventListener("submit", function(e) {
   messageForm.reset();
 
 });
+
+
+// get my github repos
+
+const gitHubRequest = new XMLHttpRequest();
+const projectSections = document.querySelector('#projects');
+
+gitHubRequest.open('GET', 'https://api.github.com/users/curiousBellyButton/repos');
+gitHubRequest.send();
+
+gitHubRequest.addEventListener('load', function (){
+  const repositories = JSON.parse(gitHubRequest.responseText)
+  console.log(repositories);
+
+  
+  for(i = 1; i < repositories.length; i++) {
+    console.log(repositories[i].name);
+
+    let createdDate = new Date (repositories[i].created_at);
+    const formatDate = createdDate.toDateString(createdDate);
+
+    const projectList = projectSections.querySelector('ul');
+    const projectListItems = document.createElement('li');
+    projectListItems.innerHTML = `<a href="${repositories[i].html_url}" target="_blank"> ${repositories[i].name}: ${formatDate} </a>`;  
+
+    projectList.appendChild(projectListItems);
+  }
+})
 
 
 
