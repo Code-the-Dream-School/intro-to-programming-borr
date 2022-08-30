@@ -14,7 +14,7 @@ h2 {
 p {
   color: rgb(151, 224, 224);
   font-family: "Times New Roman", sans-serif;
-  font-size: 22pm;
+  font-size: 15px;
 }
 
 button {
@@ -57,4 +57,10 @@ span {
   color: rgb(225, 168, 225);
   background-color: rgb(65, 238, 108);
   border: 5px;
+}
+
+#projects {
+  color:rgb(74, 216, 216)
+  font-size: 10px;
+  font-family: "Times New Roman", sans-serif;
 }

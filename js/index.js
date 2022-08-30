@@ -39,7 +39,7 @@ messageForm.addEventListener('submit', function(e) {
   document.getElementById('leave_message').reset();
 })
 
-var githubRequest = new XMLHttpRequest();
+let githubRequest = new XMLHttpRequest();
 githubRequest.open("GET", "https://api.github.com/users/pramotesuewiroj/repos", true);
 githubRequest.send();
 githubRequest.onload = function() {
@@ -49,7 +49,9 @@ githubRequest.onload = function() {
   let projectList = projectSection.getElementsByTagName('ul')[0];
   for (let i=0; i < repositories.length; i++) {
     const project = document.createElement('li');
-    project.innerText = repositories[i].name;
+    project.innerText = `<a href=${repositories[i].html_url}>${repositories[i].html_url}</a><span> Description: ${repositories[i].description} </span><span> Created Date: ${repositories[i].created_at} </span>`;
     projectList.appendChild(project);
+    console.log(repositories[i].html_url);
+    console.log(repositories[i].description, repositories[i].created_at);
   }
 };
