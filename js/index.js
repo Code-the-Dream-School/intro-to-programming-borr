@@ -44,14 +44,11 @@ githubRequest.open("GET", "https://api.github.com/users/pramotesuewiroj/repos", 
 githubRequest.send();
 githubRequest.onload = function() {
   const repositories = JSON.parse(this.responseText);
-  console.log(repositories);
   let projectSection = document.getElementById('projects');
   let projectList = projectSection.getElementsByTagName('ul')[0];
   for (let i=0; i < repositories.length; i++) {
     const project = document.createElement('li');
-    project.innerText = `<a href=${repositories[i].html_url}>${repositories[i].html_url}</a><span> Description: ${repositories[i].description} </span><span> Created Date: ${repositories[i].created_at} </span>`;
+    project.innerHTML = `<a href=${repositories[i].html_url}>${repositories[i].html_url}</a><span> Description: ${repositories[i].description} </span><span> Created Date: ${repositories[i].created_at} </span>`;
     projectList.appendChild(project);
-    console.log(repositories[i].html_url);
-    console.log(repositories[i].description, repositories[i].created_at);
   }
 };
