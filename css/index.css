@@ -14,7 +14,7 @@ h2 {
 p {
   color: rgb(151, 224, 224);
   font-family: "Times New Roman", sans-serif;
-  font-size: 22pm;
+  font-size: 15px;
 }
 
 button {
@@ -55,42 +55,11 @@ footer {
 
 span {
   color: rgb(225, 168, 225);
-  background-color: rgb(65, 238, 108);
   border: 5px;
 }
 
-.flex-container {
-  display: flex;
+#projects {
+  color:rgb(74, 216, 216)
+  font-size: 10px;
+  font-family: "Times New Roman", sans-serif;
 }
-
-.flex-container a {
-  color: black;
-  background: rgb(239, 178, 125);
-  border: 1px solid brown;
-  height: 30px;
-  margin: 10px;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.flex-container div {
-  margin: 3px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: #2196F3;
-  padding: 3px;
-}
-
-.grid-item {
-  background-color: rgba(239, 52, 52, 0.8);
-  padding: 5px;
-  font-size: 15px;
-}
-
-@media (max-width: 600px) {
-  body {
-    margin: 8px;
-  }
