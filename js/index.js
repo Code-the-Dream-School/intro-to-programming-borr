@@ -3,9 +3,9 @@ let thisYear = today.getFullYear();
 const container = document.querySelector('#container');
 const footer = document.querySelector('footer');
 const copyright = document.createElement('copyright');
-copyright.innerHTML = 'Pramote '+thisYear;
+copyright.innerHTML = `&copy; Pramote Suewirojanakul ${thisYear}`;
 footer.appendChild(copyright);
-const skills = ['financial analyst', 'risk management'];
+const skills = ['financial analyst', 'risk management', 'google data analytics', 'html', 'javascript'];
 const skillsSection = document.getElementById('skills');
 const skillsList = document.querySelector("h2");
 for (let num in skills) {
