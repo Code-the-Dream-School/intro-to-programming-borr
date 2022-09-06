@@ -97,9 +97,34 @@ messageForm.addEventListener("submit", (e) => {
     
 
 
-    const hamburger = document.getElementsById('hamburger')
+   // const hamburger = document.getElementsById('hamburger')
     const navUL = document.getElementsByClassName('nav-ul')
 
     hamburger.addEventListener('click', () => {
         navUL.classList.toggle('show');
     })
+
+
+    // lesson 6-1
+
+    let githubRequest = new XMLHttpRequest()
+
+    githubRequest.open("GET", "https://api.github.com/users/jvazquez2028/repos")
+
+    //githubRequest.send()
+
+    githubRequest.addEventListener('load', function() {
+      let repositories = JSON.parse(this.response)
+
+      let projectSection= document.getElementById('projects')
+      let projectList = projectSection.querySelector('ul')
+      
+
+    for (i=0; i < repositories.length; i++) {
+      let project = document.createElement('li')
+      project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`
+      projectList.appendChild(project)
+    }
+  })
+
+  githubRequest.send()
