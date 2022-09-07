@@ -89,7 +89,7 @@ messageForm.addEventListener("submit", (e) => {
   //   Append the newMessage to the messageList element
 
 
-  */
+  
  
 
     
@@ -103,6 +103,7 @@ messageForm.addEventListener("submit", (e) => {
     hamburger.addEventListener('click', () => {
         navUL.classList.toggle('show');
     })
+    
 
 
     // lesson 6-1
@@ -111,9 +112,9 @@ messageForm.addEventListener("submit", (e) => {
 
     githubRequest.open("GET", "https://api.github.com/users/jvazquez2028/repos")
 
-    //githubRequest.send()
+    githubRequest.send()
 
-    githubRequest.addEventListener('load', function() {
+   githubRequest.addEventListener('load', function() {
       let repositories = JSON.parse(this.response)
 
       let projectSection= document.getElementById('projects')
@@ -126,5 +127,19 @@ messageForm.addEventListener("submit", (e) => {
       projectList.appendChild(project)
     }
   })
+*/
+  //githubRequest.send()
+  
 
-  githubRequest.send()
+  //lesson 6-2
+
+  fetch("https://api.github.com/users/jvazquez2028/repos")
+  .then((response) => response.json())
+  .then((repositories) => {
+    let projectsList = document.getElementById("projects") 
+    repositories.forEach(function(repo) {
+      let project = document.createElement("li")
+      project.innerHTML = `<a href=${repo.html_url}>${repo.name}</a>`
+      projectsList.appendChild(project)
+    })
+  })
