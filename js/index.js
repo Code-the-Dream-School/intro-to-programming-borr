@@ -12,30 +12,12 @@ const skills = ["HTML", "CSS", "JS", "REACT"];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 
-for(i = 0; i < skills.length; i++) {
+for(let i = 0; i < skills.length; i++) {
   const skill = document.createElement('li');
   skill.textContent=skills[i];
   skillsList.appendChild(skill);
   
 };
-
-// style the skills list // works but use CSS instead!
-// const skillsListItems = document.querySelector('#skills').getElementsByTagName('li');  
-// console.log(skillsListItems[0]);
-
-// for(i = 0; i < skillsListItems.length; i++) {
-//   skillsListItems[i].style.backgroundColor = 'white'; 
-//   skillsListItems[i].style.listStyle = 'none';
-//   skillsListItems[i].style.marginBottom = '.25rem';
-//   skillsListItems[i].style.padding = '.40rem';
-//   skillsListItems[i].style.maxWidth = 'fit-content';
-//   skillsListItems[i].style.backgroundColor = 'white'; 
-//   skillsListItems[i].style.borderRadius = '.5rem';
-// }
-
-
-// console.log(skillsList);
-
 
 // v3 works
 const messageForm = document.querySelector('[name="leave_message"]');
@@ -47,9 +29,9 @@ messageForm.addEventListener("submit", function(e) {
   e.preventDefault();
   
   // log the value of the form fields
-  nameValue = e.target.name.value;
+  const nameValue = e.target.name.value;
   console.log(nameValue);
-  emailValue = e.target.email.value;
+  const emailValue = e.target.email.value;
   console.log(emailValue);
   const messageValue = e.target.message.value;
   console.log(messageValue);
@@ -70,7 +52,7 @@ messageForm.addEventListener("submit", function(e) {
  
   // show emailto link using name, and show the message
   const newMessage = document.createElement('li');
-  // moved spand after "wrote" to restrict prevent it from being editable  
+  // moved span after "wrote" to restrict prevent it from being editable  
   newMessage.innerHTML=`<a style="color:#00bcd4; font-weight:bold;" href="mailto:${emailValue}">${nameValue}</a> wrote: <span> ${messageValue}</span>`; 
   
   // create removeButton
@@ -88,9 +70,7 @@ messageForm.addEventListener("submit", function(e) {
   // click remove Button to delete each newMessage
   removeButton.addEventListener('click', function (){
     // button's parent element
-    const entry = removeButton.parentNode;
-    // console.log(`removeButton previousSibling:` + removeButton.previousSibling);
-    // console.log(`removeButton getparentNode:` + removeButton.parentNode);
+    const entry = removeButton.parentNode; 
     entry.remove();
 
     // if it's the last message, hide "Messages h2"
@@ -113,24 +93,9 @@ messageForm.addEventListener("submit", function(e) {
   // v.2 edit using contentEditable instead
 
   editButton.addEventListener('click', function() {
-    // v1 workes but not desirable
-    // messageForm.name.value = nameValue;
-    // messageForm.email.value = emailValue;
-    // messageForm.message.value = messageValue;
-    
-    // console.log(this.parentNode.querySelector('span'))
-
     const textToEdit = this.parentNode.querySelector('span')
     textToEdit.contentEditable = 'true';
-    textToEdit.style.border = "1px dashed white";    
-
-	  // for (i = 0; i < messageList.children.length; i++) {
-    //   // console.log(`messageList i:` + i);
-    //   console.log(`messageList i click:` + i);
-    //   messageList.children[i].querySelector('span').contentEditable = 'true';
-    //   messageList.children[i].querySelector('span').style.border = "1px dashed white";         
-    // }   
-  
+    textToEdit.style.border = "1px dashed white";  
 	});
 
    // add save button
@@ -142,24 +107,9 @@ messageForm.addEventListener("submit", function(e) {
    newMessage.appendChild(saveButton);
 
    saveButton.addEventListener('click', function() {
-    // v1 workes but not desirable
-    // messageForm.name.value = nameValue;
-    // messageForm.email.value = emailValue;
-    // messageForm.message.value = messageValue;
-    
-    // console.log(this.parentNode.querySelector('span'))
-
     const textToEdit = this.parentNode.querySelector('span')
     textToEdit.contentEditable = 'false';
-    textToEdit.style.border = "none";    
-
-	  // for (i = 0; i < messageList.children.length; i++) {
-    //   // console.log(`messageList i:` + i);
-    //   console.log(`messageList i click:` + i);
-    //   messageList.children[i].querySelector('span').contentEditable = 'true';
-    //   messageList.children[i].querySelector('span').style.border = "1px dashed white";         
-    // }   
-  
+    textToEdit.style.border = "none";  
 	});
 
 
@@ -176,30 +126,26 @@ messageForm.addEventListener("submit", function(e) {
 
 // get my github repos
 
-const gitHubRequest = new XMLHttpRequest();
 const projectSections = document.querySelector('#projects');
 
-gitHubRequest.open('GET', 'https://api.github.com/users/curiousBellyButton/repos');
-gitHubRequest.send();
 
-gitHubRequest.addEventListener('load', function (){
-  const repositories = JSON.parse(gitHubRequest.responseText)
-  console.log(repositories);
+const gitHubProjectUrl = 'https://api.github.com/users/curiousBellyButton/repos'
 
+fetch(gitHubProjectUrl)
+  .then((response) => {
+    if(!response.ok) throw alert(`status: ` + response.status);
+    return response.json();    
+  })
+  .then((data) => {
+    const repositories = data;
+    for(let i = 1; i < repositories.length; i++) {
   
-  for(i = 1; i < repositories.length; i++) {
-    console.log(repositories[i].name);
-
-    let createdDate = new Date (repositories[i].created_at);
-    const formatDate = createdDate.toDateString(createdDate);
-
-    const projectList = projectSections.querySelector('ul');
-    const projectListItems = document.createElement('li');
-    projectListItems.innerHTML = `<a href="${repositories[i].html_url}" target="_blank"> ${repositories[i].name}: ${formatDate} </a>`;  
-
-    projectList.appendChild(projectListItems);
-  }
-})
-
-
+      let createdDate = new Date (repositories[i].created_at);
+      const formatDate = createdDate.toDateString(createdDate);  
+      const projectList = projectSections.querySelector('ul');
+      const projectListItems = document.createElement('li');
+      projectListItems.innerHTML = `<a href="${repositories[i].html_url}" target="_blank"> ${repositories[i].name}: ${formatDate} </a>`;  
+      projectList.appendChild(projectListItems);
+    }
+  })
 
