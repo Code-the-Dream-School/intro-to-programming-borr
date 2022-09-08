@@ -63,25 +63,19 @@ ul {
   padding: 10px;
 }
 
-.experience-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 10px; 
-
-}
-
-/* 
-.experience li {
-  // margin-bottom: 1rem;
-  list-style: none;
-  margin-top: .5rem;
+.experience-items {
   display: flex;
   flex-wrap: wrap;
-} */
+    
+}
 
+.experience-items p {
+  margin-top: 5px;
+    
+}
 
 .job-title {
-  padding: 0.4rem;
+  padding: 0.4em;
   max-width: fit-content;
   background-color: rgb(165, 197, 255);
   border-radius: 0.5rem;
@@ -93,16 +87,16 @@ ul {
   max-width: fit-content;
   background-color: white;
   border-radius: 0.5rem;
+  margin-left: 5px;  
+    
 }
 
 #skills ul {
   display: flex;
-  gap: 0.3rem;
-
-  
+  gap: 0.3rem;  
 }
 
-#skills li {
+#skills li, #projects li {
   list-style: none;  
   padding: 0.4rem;
   max-width: fit-content;
@@ -110,26 +104,38 @@ ul {
   border-radius: 0.5rem;
 }
 
+#projects li {
+  list-style: none;  
+  padding: 0.4rem;
+  max-width: fit-content;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.project-list-container ul{
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  
+}
+
+#projects a:hover {
+  text-decoration: underline ;
+  text-decoration-color: #60d663;  
+}
+
 form {
  margin-left: 10px;
 }
 
-.form-grid-container {
+.form-grid-container{
   display: grid;
   grid-template-columns: 1fr;
   grid-gap:0px;
 }
-/* 
-use h2 color instead  to create consistency
-
-.leave-message h2 {
-  color: black;
-}
- */
 
 label {
   font-weight: 600;
-  /* color: black; */
 }
 
 input,
@@ -162,13 +168,12 @@ button {
 
 #messages li {
   margin-left: 1.75rem;
-  margin-bottom: 1rem;
-  /* list-style: none; */
-  /* list-style-type: kannada; */
+  margin-bottom: 1rem;  
   list-style-type: decimal-leading-zero;
 }
+
 #messages button {
-  margin-left: 1rem;
+  margin-left: .5rem;
   max-width: fit-content;
   background-color: #00bcd4;
   border: none;
@@ -199,24 +204,14 @@ footer {
 .nav-bar {
   width: 100%;
   display: grid;
-  grid-template-columns: 2.68fr 1fr;
-  
-  /* display: flex; */
+  grid-template-columns: 2.68fr 1fr;    
 }
 
 nav {
   display: flex;
-  margin-top: 10px;
-
-  /* flex-wrap: wrap; */
+  margin-top: 10px;  
   align-items: center;
 }
-
-/* #nav-list {
-  padding: 0;
-  display: flex;
-  align-items: center;
-} */
 
 .w-100 {
   width: 100%;
@@ -238,30 +233,22 @@ nav {
   height: auto;
 }
 
-/* hover over virtual coffee h2 works */
+/* reduce hover over area  */
+.contact-vc {
+  width: fit-content;
+  padding-right: 35px;
+}
 
+/* hover over virtual coffee h2 works */
 .contact-vc:hover {
-  background-image: URL("../images/vg5.gif");  
+  background-image: URL("../images/James_coffee-t1v2.gif");  
   background-repeat: no-repeat;
   background-size: 2rem;
-  background-position: 12rem 5%;
+  background-position: 11.5rem 400%;
   /* background-position: right center; */
   /* background-position: bottom; */
   color: burlywood;
 }  
-
-
-
-/* @media only screen and (max-width: 942px) {
-  // moves menus beneath name
-  .nav-bar {
-    flex-wrap: wrap;
-  }
-  // fixes button backround responsiveness
-  nav {
-    flex-wrap: wrap;
-  }
-} */
 
 
 @media only screen and (max-width: 980px) {
@@ -274,6 +261,16 @@ nav {
     flex-wrap: wrap;
   }
     
+}
+
+/* responsive message buttons */
+@media only screen and (max-width: 800px) {
+  #messages button {
+    display: flex;
+    align-items: center;
+    margin-left: 0rem;
+    margin-top: .2rem;  
+  }    
 }
 
 @media only screen and (max-width: 350px) {
