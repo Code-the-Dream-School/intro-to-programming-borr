@@ -1,60 +1,62 @@
 * {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.959);
 }
 
 h1 {
-  color: rgb(225, 168, 225);
+  color: rgb(0, 183, 255);
 }
 
 h2 {
-  color: rgb(65, 238, 108)
+  color: black
 }
 
 p {
-  color: rgb(151, 224, 224);
+  color: black;
   font-family: "Times New Roman", sans-serif;
   font-size: 15px;
 }
 
 button {
-  color: rgb(232, 95, 95);
-  background-color: rgb(242, 245, 42);
+  color: rgb(0, 195, 255);
+  background-color: rgb(42, 116, 165);
   padding: 10px;
-  margin: 30px;
-  border: rgb(197, 26, 26);
+  margin: 10px;
+  border: 10px;
+  border-color: rgb(0, 195, 255);
+  font-size: 15px;
 }
 
 input {
   color: rgb(5, 5, 5);
-  background-color: rgb(245, 157, 157);
+  background-color: rgb(206, 242, 245);
   font-size: 15px;
   border: 10px;
-  padding: 15px;
+  padding: 10px;
 }
 
 textarea {
   color: rgb(9, 26, 211);
-  background-color: rgb(207, 242, 196);
+  background-color: white;
 }
 
 #messages {
   color: rgb(230, 35, 35);
-  font-size: 20px;
-  padding: 10px;
-  margin: 30px;
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
 }
 
-footer {
-  color: rgb(214, 238, 36);
-  background-color: rgb(40, 80, 80);
-  font-size: 10px;
+/* footer {
+  color: rgb(42, 116, 165);
+  background-color: lightgray;
+  font-size: 15px;
   padding: 10px;
-  margin: 30px;
 }
+*/
 
 span {
-  color: rgb(225, 168, 225);
+  color: rgb(133, 226, 226);
   border: 5px;
 }
 
@@ -62,4 +64,76 @@ span {
   color:rgb(74, 216, 216)
   font-size: 10px;
   font-family: "Times New Roman", sans-serif;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container a {
+  color: rgb(46, 198, 236);
+  background: rgb(181, 231, 233);
+  border: 2px solid rgb(42, 116, 165);
+  height: 20px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 9%;
+}
+
+.flex-container div {
+  margin: 3px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 3px;
+}
+
+.grid-item {
+  background-color: rgba(239, 52, 52, 0.8);
+  padding: 5px;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 8px;
+  }
+
+section {
+  background-color: lightgray;
+}
+
+footer {
+  background-color: var(--color-lighter);
+  font-size: 1.125rem;
+}
+
+.container {
+  padding: 1rem 0;
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 90vw;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  font-size: 1.125rem;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 1rem;
 }

@@ -3,9 +3,9 @@ let thisYear = today.getFullYear();
 const container = document.querySelector('#container');
 const footer = document.querySelector('footer');
 const copyright = document.createElement('copyright');
-copyright.innerHTML = 'Pramote '+thisYear;
+copyright.innerHTML = `&copy; Pramote Suewirojanakul ${thisYear}`;
 footer.appendChild(copyright);
-const skills = ['financial analyst', 'risk management', 'credit risk managemetn', 'market risk management', 'investment risk management'];
+const skills = ['financial analyst', 'risk management', 'google data analytics', 'html', 'javascript'];
 const skillsSection = document.getElementById('skills');
 const skillsList = document.querySelector("h2");
 for (let num in skills) {
@@ -39,7 +39,8 @@ messageForm.addEventListener('submit', function(e) {
   document.getElementById('leave_message').reset();
 })
 
-let githubRequest = new XMLHttpRequest();
+// Using AJAX
+/*let githubRequest = new XMLHttpRequest();
 githubRequest.open("GET", "https://api.github.com/users/pramotesuewiroj/repos", true);
 githubRequest.send();
 githubRequest.onload = function() {
@@ -52,3 +53,20 @@ githubRequest.onload = function() {
     projectList.appendChild(project);
   }
 };
+*/
+
+//Using Fetch API
+fetch("https://api.github.com/users/pramotesuewiroj/repos")
+  .then((response) => response.json())
+  .then((repositories) => {
+    let projectSection = document.getElementById('projects');
+    let projectList = projectSection.getElementsByTagName('ul')[0];
+    for (let i=0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      project.innerHTML = `<a href=${repositories[i].html_url}>${repositories[i].html_url}</a><span> ; Description: ${repositories[i].description} </span><span> ; Created Date: ${repositories[i].created_at} </span>`;
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
