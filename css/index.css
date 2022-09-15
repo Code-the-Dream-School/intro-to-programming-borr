@@ -1,7 +1,9 @@
+:root{
+  --background:rgba();
+}
 html {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  
+  font-size: 20px;  
 }
 
 body {
@@ -20,7 +22,6 @@ nav ul li {
   list-style: none;
   display: inline;
 }
-
 .menu-list {
   float: right;
   margin-left: 0.25rem;
@@ -178,7 +179,7 @@ button {
   background-color: #00bcd4;
   border: none;
 }
-footer {
+footer{
   display: flex;
 
   /* X-axis */
@@ -187,10 +188,12 @@ footer {
   /* Y-axis */
   align-items: center;
   height: 2rem;
-  background-color: #f9ebd6;
-  
+  background-color: #f9ebd6;  
 }
 
+footer a {
+  display: flex;  
+}
 
 .hide {
   display: none;
@@ -210,7 +213,7 @@ footer {
 nav {
   display: flex;
   margin-top: 10px;  
-  align-items: center;
+  align-items: center;  
 }
 
 .w-100 {
@@ -225,6 +228,14 @@ nav {
   margin: 5px;
 }
 
+.nav-item:hover {
+  background-color: #1565c0;
+  color: white;
+
+}
+.nav-toggle {
+  display: none;
+}
 
 /* effects */
 
@@ -256,11 +267,44 @@ nav {
     display: grid;
     grid-template-columns: 1fr;
   }
-
+  
   nav {
     flex-wrap: wrap;
+    flex-direction: column;
+    display:none; 
+  }  
+  .nav-toggle:checked ~ nav {
+    display:flex;
+  }  
+  .nav-toggle-label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 2rem;
+    margin-top: 2.9rem;       
   }
+   /* burger menu icons */
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: #f9ebd6;
+    height: 10px;
+    width: 3em;
+    border-radius: 2px;
+    position: absolute;
     
+  }  
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';        
+  }  
+  .nav-toggle-label span::before {
+    bottom: 16px;       
+  }
+  .nav-toggle-label span::after {
+    top: 16px;         
+  }    
 }
 
 /* responsive message buttons */
@@ -276,8 +320,7 @@ nav {
 @media only screen and (max-width: 350px) {
   .experience-container {
     grid-template-columns: 1fr;
-    grid-gap: 50px;
-    
+    grid-gap: 50px;  
     
   }
 

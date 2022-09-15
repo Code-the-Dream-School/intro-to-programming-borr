@@ -13,23 +13,25 @@
 </head>
 
 <body>
-  <div class = "nav-bar">
-    <div class="w-100">  
-        <span class = "classheader" id = "idheader" h1-hover-after="Front End Developer"> James H. Nguyen</span>
-    </div>
-    <nav>    
-      <a class="nav-item" href = "#skills-h2">Skills</a>
-      <a class="nav-item" href = "#exprience">Experience</a>
-      <a class="nav-item" href = "#contact">Contact</a>
-      <a class="nav-item" href = "#about">About</a> 
-    </nav>
+   <div class = "nav-bar">
+     <div class="w-100">  
+         <span class = "classheader" id = "idheader" h1-hover-after="Front End Developer"> James H. Nguyen</span>
+     </div>
+     <input type="checkbox" id="nav-toggle" class="nav-toggle">
+     <nav>    
+       <a class="nav-item" href = "#skills-h2">Skills</a>
+       <a class="nav-item" href = "#experience">Experience</a>
+       <a class="nav-item" href = "#contact">Contact</a>
+       <a class="nav-item" href = "#about">About</a> 
+     </nav>
+     <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+     </label>
   </div>
-  
   <section>
     <h2 id="about">About</h2>
     <p id="about-summary"> I enjoy all things design-related, from graphic to industrial.  Recently I've also started learning digital marketing, completed a UX / UI course, and now am learning front end coding.</p>    
-  </section>
-
+  </section> 
   <section class = "experience">
     <h2 id="experience">Experience</h2>      
     <div class = "experience-container"> 
@@ -43,19 +45,16 @@
       </div>       
     </div> 
   </section>
-  
   <section id = "skills">
     <h2 id="skills-h2">Skills</h2>
     <ul></ul>
   </section>
-
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-list-container">
       <ul></ul>
     </div>
   </section>
-  
   <section style = "display: none";>
     <h2>Connect</h2>
     <ul>   
@@ -64,8 +63,7 @@
       <li>https://github.com/curiousBellyButton</li>
     </ul>
   </section>
-  
-  <section class = "leave-message">
+  <section id="contact" class = "leave-message">
     <h2 class="contact-vc">Virtual Coffee?</h2> 
     <form name="leave_message">
       <div class="form-grid-container">
@@ -79,18 +77,16 @@
       </div>  
     </form>
   </section>
-
   <section id="messages">
     <h2 id="messages-header" class="hide" style="display: none;">Messages</h2>
     <ul></ul>
   </section>
-  
-  <footer> 
+  <footer>
+    <a href="https://www.linkedin.com/in/james-o-5a388a223/" target="_blank"> 
+      <img src="https://www.shareicon.net/data/512x512/2017/06/28/888041_logo_512x512.png" alt="James H. Nguyen Linkedin" width="50px" height="auto">  
+    </a>  
   </footer>
-
   <script src="js/index.js"></script>
 
 </body>
 </html>
-
-

@@ -3,7 +3,6 @@ const today = new Date();
 const thisYear = today.getFullYear();
 
 const footer = document.querySelector('footer');
-
 const copyright = document.createElement('p');
 copyright.textContent = `James H. Nguyen ${thisYear}`;
 footer.appendChild(copyright);
@@ -133,13 +132,12 @@ const gitHubProjectUrl = 'https://api.github.com/users/curiousBellyButton/repos'
 
 fetch(gitHubProjectUrl)
   .then((response) => {
-    if(!response.ok) throw alert(`status: ` + response.status);
+    // if(!response.ok) throw alert(`status: ` + response.status);
     return response.json();    
   })
   .then((data) => {
     const repositories = data;
-    for(let i = 1; i < repositories.length; i++) {
-  
+    for(let i = 1; i < repositories.length; i++) {  
       let createdDate = new Date (repositories[i].created_at);
       const formatDate = createdDate.toDateString(createdDate);  
       const projectList = projectSections.querySelector('ul');
@@ -148,4 +146,5 @@ fetch(gitHubProjectUrl)
       projectList.appendChild(projectListItems);
     }
   })
+  .catch(error => console.log('ERROR'))
 
