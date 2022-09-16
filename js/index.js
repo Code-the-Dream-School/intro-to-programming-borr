@@ -7,6 +7,7 @@ const copyright = document.createElement('p');
 copyright.textContent = `James H. Nguyen ${thisYear}`;
 footer.appendChild(copyright);
 
+
 const skills = ["HTML", "CSS", "JS", "REACT"];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
@@ -126,19 +127,16 @@ messageForm.addEventListener("submit", function(e) {
 // get my github repos
 
 const projectSections = document.querySelector('#projects');
-
-
 const gitHubProjectUrl = 'https://api.github.com/users/curiousBellyButton/repos'
 
 fetch(gitHubProjectUrl)
   .then((response) => {
-    // if(!response.ok) throw alert(`status: ` + response.status);
     return response.json();    
   })
   .then((data) => {
     const repositories = data;
     for(let i = 1; i < repositories.length; i++) {  
-      let createdDate = new Date (repositories[i].created_at);
+      let createdDate = new Date(repositories[i].created_at);
       const formatDate = createdDate.toDateString(createdDate);  
       const projectList = projectSections.querySelector('ul');
       const projectListItems = document.createElement('li');
@@ -146,5 +144,8 @@ fetch(gitHubProjectUrl)
       projectList.appendChild(projectListItems);
     }
   })
-  .catch(error => console.log('ERROR'))
+  .catch((err) => {
+    console.table(err.stack)    
+  })
+  
 
