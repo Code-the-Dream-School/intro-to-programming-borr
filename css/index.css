@@ -247,20 +247,22 @@ nav {
 /* reduce hover over area  */
 .contact-vc {
   width: fit-content;
-  padding-right: 35px;
+  padding-right: 100px;
+  padding-top: 25px;
+}
+
+form {
+  margin: 0px;
 }
 
 /* hover over virtual coffee h2 works */
 .contact-vc:hover {
   background-image: URL("../images/James_coffee-t1v2.gif");  
   background-repeat: no-repeat;
-  background-size: 2rem;
-  background-position: 11.5rem 400%;
-  /* background-position: right center; */
-  /* background-position: bottom; */
+  background-size: 3rem;
+  background-position: 11.5rem; 
   color: burlywood;
 }  
-
 
 @media only screen and (max-width: 980px) {
   .nav-bar {
