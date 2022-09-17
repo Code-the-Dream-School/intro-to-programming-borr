@@ -1,0 +1,595 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
+}
+
+html{
+    background-color: rgb(85, 84, 84);
+    margin: 10px;
+}
+
+body{
+    background: linear-gradient(black 40%, white);
+    margin: 10px 10px;
+}
+
+.mainContainer{
+    border: 2px solid white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* nav section */
+.navContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(profile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-bottom: 0.5px solid white;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    height: 60px;
+    overflow: hidden;
+    padding: 0px 10px 18px 10px;
+}
+
+.navListContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.navName{
+    color: black;
+    text-shadow: 1px 1px 1px white;
+    font-weight: 900;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.navList{
+   display: block;
+   padding: 25px;
+   color: white;
+   text-shadow: 2px 2px 2px black;
+   font-size: 20px;
+   font-weight: 900;
+   cursor: pointer;
+}
+
+.showNavList{
+   height: 750px;
+   transition: 1s;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.barsContainer{
+    color: white;
+    margin-top: 10px;
+}
+
+.barsContainer:hover{
+    color: black;
+}
+
+
+/* about section */
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.profileImage{
+    height: 500px;
+    width: 450px;
+    margin-bottom: 50px;
+}
+
+.aboutTitle{
+    color: rgb(249, 222, 190);
+    padding: 10px 0px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.aboutTextContainer{
+    width: 450px;
+    text-align: justify;
+    color: white;
+    font-size: 25px;
+}
+
+ .aboutText {
+     font-family: sans-serif,Arial, Helvetica, sans-serif;
+ }
+
+.myWork{
+    padding: 12px;
+    border-radius: 2%;
+    outline: none;
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    background-color: turquoise;
+    color: black;
+    border: 1px solid turquoise;
+}
+
+.myWork:hover{
+    color: rgb(106, 106, 106);
+}
+
+.scrollDownButton{
+    text-align: center;
+    cursor: pointer;
+}
+
+.scrollDownButton i{
+    border: 2px solid turquoise;
+    padding: 20px;
+    border-radius: 100%;
+    color: white;
+    margin-top: 50px;
+}
+
+
+/* experience section */
+#experience{
+   display: grid;
+   place-items: center;
+   margin-top: 0px;
+   font-size: 20px;
+   padding: 50px 0px;
+}
+
+.experienceCardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 400px;
+}
+
+
+.experienceCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0px;
+    width: 100%;
+    background-color: teal;
+    padding: 25px;
+}
+
+.experienceTitle{
+    color: white;
+    text-align: left;
+    font-size: 80px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.experienceName{
+    color: white;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.jobTitle{
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+small{
+    color: white;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+
+/* project section */
+#projects{
+    height: 1300px;
+    padding: 50px 0px;
+}
+
+.projectTitle{
+    color: white;
+    font-size: 80px;
+    text-align: right;
+    margin-bottom: 20px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.projectCardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
+
+.projectCard {
+       padding: 80px;
+       border: 1px solid white;
+   }
+
+
+.projectName{
+    color: wheat;
+    text-transform: capitalize;
+    text-shadow: 1px 2px 5px black;
+    font-size: 35px;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+.projectBtn{
+    padding: 10px;
+    margin: 50px;
+    font-weight: 800;
+    background-color: turquoise;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 2%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cardOne,
+.cardTwo,
+.cardThree {
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+}
+
+
+.viewProjectBtn:hover{
+    color: rgb(106, 106, 106);
+}
+
+/* skills container */
+#skills{
+    margin-top: 300px;
+}
+
+.skillsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.skillsHeader{
+    text-align: left;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.skill{
+    font-size: 20px;
+    cursor: default;
+    color: white;
+    border: 2px solid rgb(110, 5, 110);
+    padding: 20px;
+    margin: 10px;
+}
+
+.skill:hover{
+   background-color: turquoise;
+    color: rgb(110, 5, 110)
+}
+
+
+/* message container */
+.messageContainer{
+    border: 2px solid black;
+    height: 500px;
+    margin: 18px;
+    text-align: center;
+    margin: 10px;
+}
+
+.message{
+    margin: 20px;
+}
+
+.text{
+    text-align: justify;
+}
+
+.remove, .edit{
+    padding: 10px;
+    background-color: turquoise;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+/* footer */
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 1000px;
+}
+
+.footerName{
+    color: rgb(110, 5, 110);
+}
+
+.contact{
+    color: black;
+}
+
+.footerContact{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.inputName,
+.inputEmail,
+.inputText{
+    padding: 13px;
+    font-size: 15px;
+    margin: 15px;
+    width: 400px;
+    border: 2px solid rgb(110, 5, 110);
+    border-radius: 2%;
+}
+
+.inputName:focus,
+.inputEmail:focus,
+.inputText:focus{
+    outline: none;
+}
+
+.messageList{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.messageSection{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.hide{
+    display: none;
+}
+
+.btnSubmit{
+    padding: 20px;
+    margin-top: 15px;
+    font-weight: 900;
+    background-color: turquoise;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;;
+}
+
+.btnSubmit:hover{
+    color:rgb(106, 106, 106)
+}
+
+.formTitle{
+    color: wheat;
+    margin-bottom: 20px;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+.footerForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1px;
+    border-radius: 2%;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.footerSection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(110, 5, 110);
+    background-color: black;;
+    height: 500px;
+    padding: 50px;
+    width: 480px;
+    font-family: 'Permanent Marker', cursive
+}
+
+.footerIcons{
+    margin-top: 100px;
+}
+
+
+.socialMediaIcons i{
+    color: white;
+}
+
+.footerIcons i{
+    color: white;
+    background-color: black;
+    padding: 25px;
+    border-radius: 100%;
+    border: 2px solid rgb(110, 5, 110);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.footerIcons i:hover{
+    background-color: rgb(37, 37, 37);
+}
+
+/* copyright */
+.copyrightContianer{
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+
+.copyright{
+    font-size: 20px;
+}
+
+
+/* responsive breakpoint 1 */
+@media screen and (min-width: 700px){
+    /* nav list */
+    .navContainer{
+        align-items: center;
+        padding: 0px 0px 0px 10px;
+    }
+
+    .navList{
+    display: block;
+    margin-left: 20px;
+    list-style-type: none;
+    color: turquoise;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    }
+
+    .navList:hover{
+        color: white;
+    }
+
+    .active{
+        color: white;
+    }
+
+    .navListContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 0px;
+    }
+
+    .barsContainer{
+        display: none;
+    }
+
+    /* about */
+    #about {
+    flex-direction: row;
+    margin-top: 100px;
+    }
+
+    .aboutTitle{
+    color: wheat;
+    font-size: 60px;
+    text-align: right;
+    }
+
+    .aboutTextContainer {
+    width: 600px;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+    /* experience */
+    .experienceCardContainer{
+        width: 900px;
+    }
+
+    .experienceTitle{
+        font-size: 200px;
+    }
+
+    /* projects */
+    #projects{
+        height: 800px;
+    }
+
+    .projectTitle{
+        font-size: 200px;
+    }
+
+    .projectCardContainer {
+        flex-direction: row;
+    }
+
+    .cardOne,
+    .cardTwo,
+    .cardThree{
+        width: 400px;
+        height: 400px
+    }
+
+    /* skills */
+    .skillsContainer{
+        margin: 0px 100px;
+    }
+
+    .skillsHeader{
+        font-size: 200px;
+    }
+
+    /* message container */
+    .messageContainer{
+        margin: 150px;
+    }
+
+    /* footer */
+    #footer{
+        flex-direction: row;
+    }
+
+    .footerForm{
+        flex-direction: row;
+        height: 450px;
+        justify-content: space-around;
+    }
+
+    .footerIcons i {
+        margin: 30px;
+    }
+}

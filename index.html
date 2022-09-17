@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link to css-->
+    <link rel="stylesheet" href="style.css" type = "text/css">
+    <!--link to font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Link to google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kanit:wght@800&family=Permanent+Marker&display=swap"
+      rel="stylesheet">
+    <title>Samson Lemma</title>
+</head>
+<body>
+  <div class = "mainContainer">
+    <!--Nav section-->
+    <nav class = "navContainer">
+        <a href = "#about" class = "navName">Samson</a>
+        <ul class = "navListContainer">
+            <a href = "#about">
+            <li class="navList active">About</li>
+            </a>
+            <a href="#experience">
+              <li class="navList">Experience</li>
+            </a>
+            <a href="#skills">
+            <li class="navList">Skills</li>
+            </a>
+            <a href="#projects">
+            <li class="navList">Projects</li>
+            </a>
+            <a href="#footer">
+              <li class="navList">Leave a Message</li>
+            </a>
+        </ul>
+        <div class="barsContainer">
+          <i class="fa fa-bars fa-2x bars"></i>
+        </div>
+    </nav>
+    <!--End of Nav Section-->
+    <!--About Section-->
+    <section id = "about">
+      <img src = "profile.jpg" alt = "Samson" class = "profileImage"/>
+      <article class = "aboutTextContainer">
+        <h2 class = "aboutTitle">Hello, I'm Samson. A full stack developer.</h2>
+        <p class = "aboutText">A well rounded full stack developer with proficiency in Javascript, React,
+          Node and MongoDB. I have an in depth understanding of web-application programming, database concepts
+          and Cloud Computing within the AWS cloud platform. 
+        </p>
+        <a href = "#projects">
+            <button type = "button"  class = "myWork">
+                My Recent Works  <i class = "fa fa-arrow-right"></i>
+            </button>
+        </a>
+    </article>
+  </section>
+  <div class="scrollDownButton">
+    <a href = "#experience">
+      <i class="fa fa-arrow-down fa-3x"></i>
+    </a>
+  </div>
+  <!--End of About Section-->
+  <!--Experience Section-->
+  <h2 class="experienceTitle">Experience</h2>
+  <section id="experience">
+    <div class="experienceCardContainer">
+      <!--Ex One-->
+      <article class="experienceCard">
+        <h3 class="experienceName">Code the dream project</h3>
+        <h4 class = "jobTitle">Front end developer</h4>
+        <small>2022-Recent</small>
+      </article>
+      <!--End of Ex one-->
+      <!--Ex Two-->
+      <article class="experienceCard">
+        <h3 class="experienceName">Samaritan Website</h3>
+        <h4 class="jobTitle">Front end developer</h4>
+        <small>2022-Recent</small>
+      </article>
+      <!--End of Ex Two-->
+      <!--Ex three-->
+      <article class="experienceCard">
+        <h3 class="experienceName">Personal Projects</h3>
+        <h4 class="jobTitle">Full stack developer</h4>
+        <small>2022-Recent</small>
+      </article>
+      <!--End of Ex three-->
+    </div>
+  </section>
+  <!--End of experience section-->
+  <!--Project Section-->
+  <section id = "projects">
+      <h2 class = "projectTitle">Projects</h2>
+      <div class = "projectCardContainer">
+      <!--Project One-->
+      <article name = "slide" class = "projectCard cardOne">
+          <h3 class = "projectName">Code the dream project</h3>
+          <button type = "button"
+          class = "projectBtn">
+          <a href = "#about">
+            View Project
+          </a>
+          </button>
+      </article>
+      <!--End of project one-->
+      <!--Project Two-->
+    <article name = "slide" class="projectCard cardTwo">
+        <h3 class="projectName">Samaritan Website</h3>
+        <button type="button" class="projectBtn">
+          <a href = "http://www.samaritanet.org">
+              View Project
+          </a>
+        </button>
+    </article>
+    <!--End of project Two-->
+    <!--Project Three-->
+    <article name = "slide" class="projectCard cardThree">
+        <h3 class="projectName">Personal Projects</h3>
+        <button type="button" class="projectBtn">
+          View Project
+        </button>
+    </article>
+    <!--End of project three-->
+    
+    </div>
+  </section>
+  <!--End of project section-->
+  <!--Skills section-->
+  <div id = "skills">
+    <h2 class = "skillsHeader">Skills</h2>
+    <ul class = "skillsContainer">
+
+    </ul>
+  </div>
+  <!--End of skills section-->
+  <!--Footer Section-->
+  <div id = "footer">
+      <form class = "footerForm">
+        <section class = "footerSection">
+        <h2 class = "formTitle">Leave a message</h2>
+        <input type = "text" placeholder="Name" class = "inputName" name = "name"/>
+        <input type="email" placeholder="Email"  class = "inputEmail" name = "email"/>
+        <input type="text" placeholder="Message" class = "inputText message" name = "text"/>
+        <button type = "submit" class = "btnSubmit">Send Message<i class = "fa fa-arrow-right"></i></button>
+        </section>
+        </form>
+        <section class = "footerIcons">
+          <i class = "fa fa-facebook fa-2x"></i>
+          <i class="fa fa-twitter fa-2x"></i>
+          <a href = "https://www.linkedin.com/in/samson-lemma-7ab722215/">
+          <i class="fa fa-linkedin fa-2x"></i>
+          </a> 
+          <a href = "https://github.com/sami12389">
+            <i class = "fa fa-github fa-2x"></i>
+          </a>
+        </section>
+  </div>
+  <!--End of footer section-->
+  <!--Messages-->
+  <div class = "messageContainer">
+    <h2>Inbox</h2>
+    <i class = "fa fa-inbox fa-2x"></i>
+    <article class = "messageList">
+    </article>
+  </div>
+  <!--End of messages-->
+  <!--Copyright and date-->
+  <div class="copyrightContianer">
+   <h5 class="copyright"></h5>
+  </div>
+  <!--end of copyright and date-->
+  </div>
+</body>
+<script src = "index.js"></script>
+</html>
