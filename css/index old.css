@@ -1,0 +1,60 @@
+* {
+  color: white;
+  background-color: black;
+}
+
+h1 {
+  color: rgb(225, 168, 225);
+}
+
+h2 {
+  color: rgb(65, 238, 108)
+}
+
+p {
+  color: rgb(151, 224, 224);
+  font-family: "Times New Roman", sans-serif;
+  font-size: 22pm;
+}
+
+button {
+  color: rgb(232, 95, 95);
+  background-color: rgb(242, 245, 42);
+  padding: 10px;
+  margin: 30px;
+  border: rgb(197, 26, 26);
+}
+
+input {
+  color: rgb(5, 5, 5);
+  background-color: rgb(245, 157, 157);
+  font-size: 15px;
+  border: 10px;
+  padding: 15px;
+}
+
+textarea {
+  color: rgb(9, 26, 211);
+  background-color: rgb(207, 242, 196);
+}
+
+#messages {
+  color: rgb(230, 35, 35);
+  font-size: 20px;
+  padding: 10px;
+  margin: 30px;
+}
+
+footer {
+  color: rgb(214, 238, 36);
+  background-color: rgb(40, 80, 80);
+  font-size: 10px;
+  padding: 10px;
+  margin: 30px;
+}
+
+span {
+  color: rgb(225, 168, 225);
+  background-color: rgb(65, 238, 108);
+  border: 5px;
+}
