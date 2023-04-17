@@ -1,0 +1,329 @@
+:root{
+  --background:rgba();
+}
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;  
+}
+
+body {
+  background-color: lightgrey;
+  color: black;
+  margin: 0px;
+  padding: 10px;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+}
+.menu-list {
+  float: right;
+  margin-left: 0.25rem;
+
+  padding: 0.4rem;
+  max-width: fit-content;
+  background-color: #f9ebd6;
+}
+
+#idheader {
+  font-family: "Share Tech", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+}
+
+#idheader:hover {
+  font-size: 0;
+}
+
+#idheader:hover::after {
+  content: attr(h1-hover-after);
+  font-family: "Share Tech", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: grey;
+  color: salmon;
+}
+
+h2, label {
+  color: #1565c0;
+}
+
+#about-summary  {
+  margin-left: 10px;
+}
+
+/* allows the jobtitle and company name to stay on one 1 line at w375px */
+ul {
+  padding: 10px;
+}
+
+.experience-items {
+  display: flex;
+  flex-wrap: wrap;
+    
+}
+
+.experience-items p {
+  margin-top: 5px;
+    
+}
+
+.job-title {
+  padding: 0.4em;
+  max-width: fit-content;
+  background-color: rgb(165, 197, 255);
+  border-radius: 0.5rem;
+  margin-left: .3rem;
+}
+
+.company-name {
+  padding: 0.4rem;
+  max-width: fit-content;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-left: 5px;  
+    
+}
+
+#skills ul {
+  display: flex;
+  gap: 0.3rem;  
+}
+
+#skills li, #projects li {
+  list-style: none;  
+  padding: 0.4rem;
+  max-width: fit-content;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+#projects li {
+  list-style: none;  
+  padding: 0.4rem;
+  max-width: fit-content;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.project-list-container ul{
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  
+}
+
+#projects a:hover {
+  text-decoration: underline ;
+  text-decoration-color: #60d663;  
+}
+
+form {
+ margin-left: 10px;
+}
+
+.form-grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:0px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 13rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  border: 0.05rem dashed black;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  height: 3rem;
+}
+
+button {
+  background-color: #1565c0;
+  color: white;
+  width: 13.3rem;
+  font-size: 1rem;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+
+#messages h2 {
+  color:  #1565c0;
+} 
+
+#messages li {
+  margin-left: 1.75rem;
+  margin-bottom: 1rem;  
+  list-style-type: decimal-leading-zero;
+}
+
+#messages button {
+  margin-left: .5rem;
+  max-width: fit-content;
+  background-color: #00bcd4;
+  border: none;
+}
+footer{
+  display: flex;
+
+  /* X-axis */
+  justify-content: center;
+
+  /* Y-axis */
+  align-items: center;
+  height: 2rem;
+  background-color: #f9ebd6;  
+}
+
+footer a {
+  display: flex;  
+}
+
+.hide {
+  display: none;
+}
+
+
+#idheader {
+  width: 100%;
+} 
+
+.nav-bar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.68fr 1fr;    
+}
+
+nav {
+  display: flex;
+  margin-top: 10px;  
+  align-items: center;  
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.nav-item {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9ebd6;
+  color: black;
+  margin: 5px;
+}
+
+.nav-item:hover {
+  background-color: #1565c0;
+  color: white;
+
+}
+.nav-toggle {
+  display: none;
+}
+
+/* effects */
+
+#img-vg5 {
+  width: 20%;
+  height: auto;
+}
+
+/* reduce hover over area  */
+.contact-vc {
+  width: fit-content;
+  padding-right: 100px;
+  padding-top: 25px;
+}
+
+form {
+  margin: 0px;
+}
+
+/* hover over virtual coffee h2 works */
+.contact-vc:hover {
+  background-image: URL("../images/James_coffee-t1v2.gif");  
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: 11.5rem; 
+  color: burlywood;
+}  
+
+@media only screen and (max-width: 980px) {
+  .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  nav {
+    flex-wrap: wrap;
+    flex-direction: column;
+    display:none; 
+  }  
+  .nav-toggle:checked ~ nav {
+    display:flex;
+  }  
+  .nav-toggle-label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 2rem;
+    margin-top: 2.9rem;       
+  }
+   /* burger menu icons */
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: #f9ebd6;
+    height: 10px;
+    width: 3em;
+    border-radius: 2px;
+    position: absolute;
+    
+  }  
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';        
+  }  
+  .nav-toggle-label span::before {
+    bottom: 16px;       
+  }
+  .nav-toggle-label span::after {
+    top: 16px;         
+  }    
+}
+
+/* responsive message buttons */
+@media only screen and (max-width: 800px) {
+  #messages button {
+    display: flex;
+    align-items: center;
+    margin-left: 0rem;
+    margin-top: .2rem;  
+  }    
+}
+
+@media only screen and (max-width: 350px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;  
+    
+  }
+
+}
